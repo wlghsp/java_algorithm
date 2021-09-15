@@ -1,6 +1,5 @@
-package buffered;
+package java_study.buffered;
 
-import java.awt.image.ImagingOpException;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;

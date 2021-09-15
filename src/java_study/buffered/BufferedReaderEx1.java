@@ -1,4 +1,4 @@
-package buffered;
+package java_study.buffered;
 
 
 import java.io.BufferedReader;
@@ -13,7 +13,7 @@ public class BufferedReaderEx1 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         // 파일에서 입력 받을 경우
-        FileReader fr = new FileReader("src/buffered/BufferedReaderEx1.java");
+        FileReader fr = new FileReader("src/java_study.buffered/BufferedReaderEx1.java");
 
         BufferedReader br_f = new BufferedReader(fr);
 

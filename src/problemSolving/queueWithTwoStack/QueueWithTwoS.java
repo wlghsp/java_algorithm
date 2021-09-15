@@ -1,4 +1,4 @@
-package queueWithTwoStack;
+package problemSolving.queueWithTwoStack;
 
 import java.util.Stack;
 

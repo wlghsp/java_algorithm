@@ -1,4 +1,4 @@
-package getMinMax;
+package java_study.getMinMax;
 
 import java.util.Arrays;
 import java.util.Comparator;
