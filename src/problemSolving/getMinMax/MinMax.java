@@ -1,4 +1,4 @@
-package java_study.getMinMax;
+package problemSolving.getMinMax;
 
 import java.util.Arrays;
 import java.util.Collections;
