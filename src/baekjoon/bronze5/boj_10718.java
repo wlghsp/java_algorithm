@@ -1,4 +1,4 @@
-package baekjoon.finished;
+package baekjoon.bronze5;
 
 public class boj_10718 {
 

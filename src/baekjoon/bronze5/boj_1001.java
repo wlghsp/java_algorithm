@@ -1,11 +1,8 @@
-package baekjoon.finished;
-
-import org.w3c.dom.ls.LSOutput;
+package baekjoon.bronze5;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.nio.Buffer;
 import java.util.StringTokenizer;
 
 public class boj_1001 {
