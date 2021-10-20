@@ -7,16 +7,19 @@ public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-
-        StringTokenizer st = new StringTokenizer(br.readLine(), " ");
-        
-        int r1 = Integer.parseInt(st.nextToken());
-        int s = Integer.parseInt(st.nextToken());
-
-        bw.write(String.valueOf((2*s - r1)));
+        int N = Integer.parseInt(br.readLine());
+  
+        StringTokenizer st;
+        for (int i = 0; i < N; i++) {
+            st = new StringTokenizer(br.readLine(), " ");
+            int a = Integer.parseInt(st.nextToken());
+            int b = Integer.parseInt(st.nextToken());
+  
+            bw.write("Case #"+ (i+1) + ": "+(a+b) + "\n");
+  
+        }
         bw.flush();
         bw.close();
-        br.close();
-
-    }
+  
+      }
 }
