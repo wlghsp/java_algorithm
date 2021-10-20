@@ -1,8 +1,22 @@
-package baekjoon;
+package baekjoon.bronzeⅢ;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
 
-public class Main {
+/*
+37
+38
+0
+
+1. odd 18
+2. even 19
+
+*/
+
+public class Boj_4892 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
@@ -29,4 +43,5 @@ public class Main {
         bw.flush();
         bw.close();
     }
+    
 }

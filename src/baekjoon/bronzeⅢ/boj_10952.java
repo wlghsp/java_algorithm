@@ -1,8 +1,6 @@
 package baekjoon.bronzeⅢ;
 
 import java.io.*;
-import java.util.Scanner;
-import java.util.StringTokenizer;
 
 public class boj_10952 {
     public static void main(String[] args) throws IOException {
