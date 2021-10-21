@@ -1,8 +1,28 @@
-package baekjoon;
+package baekjoon.silverⅣ;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
 
-public class Main {
+/*
+110
+
+99
+
+1
+
+1
+
+1000
+
+144
+
+*/
+
+
+public class Boj_1065 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
@@ -17,16 +37,19 @@ public class Main {
 
     }
 
+
     static int arithmetic_sequence(int num) {
         int cnt= 0;
 
         if (num < 100) {
             return num;
+
         } else {
             cnt = 99;
             if (num == 1000) {
                 num = 999;
             }
+
             for (int i = 100; i <= num; i++) {
                 int hun = i/100;
                 int ten = (i/10)%10;
@@ -35,7 +58,7 @@ public class Main {
                     cnt++;
                 }
             }
+            return cnt;
         }
-        return cnt;
     }
 }
