@@ -51,9 +51,9 @@ public class Boj_1065 {
             }
 
             for (int i = 100; i <= num; i++) {
-                int hun = i/100;
-                int ten = (i/10)%10;
-                int one = i%10;
+                int hun = i/100;  // 100의 자리수
+                int ten = (i/10)%10; // 10의 자리수
+                int one = i%10; // 1의 자리수 
                 if ((hun-ten) == (ten-one)) {
                     cnt++;
                 }

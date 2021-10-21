@@ -1,9 +1,33 @@
-package baekjoon;
+package baekjoon.bronzeⅡ;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
 import java.util.StringTokenizer;
 
-public class Main {
+/*
+
+5
+1 2 1 4 6
+
+5
+
+8
+12 20 1 3 4 4 11 1
+
+8
+
+6
+10 8 8 6 4 3
+
+0
+
+*/
+
+
+public class Boj_2846 {
     public static void main(String[] args) throws IOException {
         BufferedReader br =  new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
