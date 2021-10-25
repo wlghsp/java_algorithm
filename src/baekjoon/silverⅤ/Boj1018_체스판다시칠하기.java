@@ -7,7 +7,7 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.util.StringTokenizer;
 
-public class Boj_1018 {
+public class Boj1018_체스판다시칠하기 {
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -30,7 +30,6 @@ public class Boj_1018 {
                         if ((r % 2 == c % 2 ? 'W' : 'B') == board[i + r].charAt(j + c)) {
                             cnt++;
                         }
-
                     }
 
                 }

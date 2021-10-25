@@ -30,17 +30,17 @@ public class Boj2846_오르막길 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
-        int N = Integer.parseInt(br.readLine());
+        int N = Integer.parseInt(br.readLine()); // 수열의 크기 N 
 
-        int[] nums = new int[N];
+        int[] nums = new int[N]; // N크기의 정수 배열 nums  선언  
 
-        StringTokenizer st = new StringTokenizer(br.readLine(), " ");
+        StringTokenizer st = new StringTokenizer(br.readLine(), " "); // StringTokenizer로 한 줄로 들어온 숫자 들을 나눈다. ex) 1 2 1 4 6
         for (int i = 0; i < N; i++) {
-            nums[i] = Integer.parseInt(st.nextToken());
+            nums[i] = Integer.parseInt(st.nextToken()); // N개의 양의 정수 nums 배열에 집어 넣기 
         }
 
-        int ans = 0;
-        int temp = 0;
+        int ans = 0; // 최대값  
+        int temp = 0; // 길이 임시변수 
         /*
          * for문을 돌리면서 이전 값보다 현재 값이 크면 오르막길 임시변수에 그 차이를 더해줌
          * 
@@ -50,12 +50,12 @@ public class Boj2846_오르막길 {
          */
 
         for (int i = 1; i < N; i++) {
-            if (nums[i - 1] < nums[i]) {
-                temp += nums[i] - nums[i - 1];
-            } else {
-                temp = 0;
+            if (nums[i - 1] < nums[i]) { // 뒷 요소가 앞 요소보다 크다면 오르막길이다. 
+                temp += nums[i] - nums[i - 1]; // 뒷 요소에서 앞 요소의 차를 빼서 temp에 더해줌 
+            } else { // 뒷 요소가 앞 요소보다 크지 않다면 
+                temp = 0; //  임시변수를 0으로 만든다. 
             }
-            ans = Math.max(temp, ans);
+            ans = Math.max(temp, ans); // 임시변수와 현재까지 가장 큰 오르막길의 길이 중에 큰 수를 결과 변수에 담는다.  
         }
 
         bw.write(ans + "\n");

@@ -1,26 +1,33 @@
 package baekjoon;
 
 import java.io.*;
-import java.util.StringTokenizer;
 
 public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-        StringTokenizer st = new StringTokenizer(br.readLine(), " ");
+        String word = br.readLine();
+        int shortLen = solve(word);
+        
+        System.out.println(shortLen);
+    }
 
-        int e = Integer.parseInt(st.nextToken());
-        int s = Integer.parseInt(st.nextToken());
-        int m = Integer.parseInt(st.nextToken());
-
-        int year = 0;
-        while (true) {
-            year++;
-            if ((year - e) % 15 == 0 && (year - s) % 28 == 0 && (year - m) % 19 == 0)
-                break;
+    public static int solve(String word) {
+        // 입력 받은 문자열이 이미 팰린드롬일 때 
+        if (word.equals(new StringBuilder(word).reverse().toString())) {
+            return word.length();
         }
-        bw.write(String.valueOf(year));
-        bw.flush();
-        bw.close();
+
+        for (int i = 1; i < word.length(); i++) {
+            StringBuilder sb = new StringBuilder(word);
+
+            // 앞에서부터 길이 1씩 늘려가면서 뒤에 붙인다.
+            sb.append(new StringBuilder(word.substring(0, i)).reverse());
+
+            // 팰린드롬 체크
+            if(sb.toString().equals(sb.reverse().toString())) {
+                return sb.length();
+            }
+        }
+        return -1;
     }
 }

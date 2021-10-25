@@ -1,4 +1,4 @@
-package baekjoon;
+package baekjoon.silverⅤ;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -30,7 +30,6 @@ public class Boj1018_체스판다시칠하기 {
                         if ((r % 2 == c % 2 ? 'W' : 'B') == board[i + r].charAt(j + c)) {
                             cnt++;
                         }
-
                     }
 
                 }

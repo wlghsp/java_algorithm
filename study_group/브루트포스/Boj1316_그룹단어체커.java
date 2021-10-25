@@ -1,11 +1,10 @@
-package baekjoon;
+package baekjoon.silverⅤ;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
-import java.util.StringTokenizer;
 
 /*
 브루트포스  
@@ -52,15 +51,28 @@ public class Boj1316_그룹단어체커 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-        int n = Integer.parseInt(br.readLine());
-        int result = n;
-        StringTokenizer st;
-        for (int i = 0; i < n; i++) {
-            st = new StringTokenizer(br.readLine());
-            String s = st.nextToken();
-            int cnt = 0;
-        }
+        int n = Integer.parseInt(br.readLine()); // 단어의 개수 n
+        int count = 0; // 그룹단어가 아닌 단어의 수
 
+        for (int i = 0; i < n; i++) { // 
+            String str = br.readLine(); // 한줄 단어 받음 
+            int len = str.length(); // 위에서 받은 단어의 길이 
+
+            loopOut:for (int j = 0; j < len-1; j++) {
+                char ch = str.charAt(j);
+                if (ch != str.charAt(j + 1)) { // 연달은 문자가 다를 때 
+                    for (int k = j + 2; k < len; k++) { // k 는 다른 첫문자 다음 다음 부터 비교하므로 j+2 부터 시작 
+                       if (ch == str.charAt(k)) { // 첫 문자와 일치하는 문자가 있어 그룹단어가 아님. count를 증가시킴
+                           count++;
+                           break loopOut;
+                       } 
+                    }
+                }
+            }
+        }
+        bw.write((n-count) + "\n"); // 전체에서 그룹단어가 아닌 count를 빼주면 그룹단어의 수가 나옴
+        bw.flush();
+        bw.close();
     }
 
 }
