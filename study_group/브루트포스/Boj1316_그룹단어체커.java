@@ -58,16 +58,16 @@ public class Boj1316_그룹단어체커 {
             String str = br.readLine(); // 한줄 단어 받음 
             int len = str.length(); // 위에서 받은 단어의 길이 
 
-            loopOut:for (int j = 0; j < len-1; j++) {
-                char ch = str.charAt(j);
-                if (ch != str.charAt(j + 1)) { // 연달은 문자가 다를 때 
-                    for (int k = j + 2; k < len; k++) { // k 는 다른 첫문자 다음 다음 부터 비교하므로 j+2 부터 시작 
-                       if (ch == str.charAt(k)) { // 첫 문자와 일치하는 문자가 있어 그룹단어가 아님. count를 증가시킴
-                           count++;
-                           break loopOut;
-                       } 
-                    }
-                }
+            loopOut:for (int j = 0; j < len-1; j++) { // 중첩된 반복문을 한꺼번에 빠져 나가는 방법으로 라벨을 for문 앞에 붙여주고 break 라벨 이런식으로 작성한다.
+                        char ch = str.charAt(j);
+                        if (ch != str.charAt(j + 1)) { // 연달은 문자가 다를 때 
+                            for (int k = j + 2; k < len; k++) { // k 는 다른 첫문자 다음 다음 부터 비교하므로 j+2 부터 시작 
+                                if (ch == str.charAt(k)) { // 첫 문자와 일치하는 문자가 있어 그룹단어가 아님. count를 증가시킴
+                                    count++;
+                                    break loopOut; // 2중포문에서 빠져 나와 다음 단어로 넘어 가게 함. 
+                                } 
+                            }
+                        }
             }
         }
         bw.write((n-count) + "\n"); // 전체에서 그룹단어가 아닌 count를 빼주면 그룹단어의 수가 나옴

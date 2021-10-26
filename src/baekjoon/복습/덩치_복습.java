@@ -41,7 +41,7 @@ public class 덩치_복습 {
 
         StringBuilder sb = new StringBuilder();
 
-        for (int i = 0; i < N; i++) {
+        for (int i = 0; i < N; i++) { 
             int rank = 1; // rank는 1부터 시작
 
             for (int j = 0; j < N; j++) {
@@ -49,7 +49,7 @@ public class 덩치_복습 {
                     continue; // 같은 사람은 비교할 필요 없음 
                 }
 
-                if (arr[i][0] < arr[j][0] && arr[i][1] < arr[j][1]) {
+                if (arr[i][0] < arr[j][0] && arr[i][1] < arr[j][1]) {// 자신 보다 덩치가 큰 사람이 있으면 랭크가 올라간다. (덩치가 큰 사람의 순위 번호가 작다.)
                     rank++;
                 }
 
