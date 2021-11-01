@@ -1,5 +1,9 @@
 package baekjoon;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
 /*
 백트래킹 문제 
 
@@ -45,7 +49,9 @@ N = 7인 경우에 다음과 같은 상담 일정표를 보자.
 
 
 public class Boj14501_퇴사 {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
         
     }
 }
