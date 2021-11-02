@@ -1,4 +1,4 @@
-package baekjoon.풀기후보;
+package baekjoon.담에풀기;
 
 /*
 
