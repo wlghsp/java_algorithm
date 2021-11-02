@@ -1,5 +1,12 @@
 package baekjoon;
 
+import java.awt.Point;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.Arrays;
+import java.util.StringTokenizer;
+
 /*
 쩰리’는 점프하는 것을 좋아하는 젤리다. 단순히 점프하는 것에 지루함을 느낀 ‘쩰리’는 새로운 점프 게임을 해보고 싶어 한다. 새로운 점프 게임의 조건은 다음과 같다.
 
@@ -30,12 +37,54 @@ HaruHaru
 
 */
 
-
 public class Boj16173_점프왕젤리 {
+    // https://lovelyunsh.tistory.com/15
+    // 블로그 참조하였습니다.
 
-    static int N; // 게임 구역의 크기
-    
-    public static void main(String[] args) {
-        
+    static int map[][];
+    static int dr[] = { 1, 0 };
+    static int dc[] = { 0, 1 };
+    static int N;
+    static boolean visit[][];
+
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+        N = Integer.parseInt(br.readLine());
+        map = new int[N][N];
+        visit = new boolean[N][N];
+
+        for (int i = 0; i < N; i++) {
+            StringTokenizer st = new StringTokenizer(br.readLine());
+            for (int j = 0; j < N; j++) {
+                map[i][j] = Integer.parseInt(st.nextToken());
+            }
+        }
+        System.out.println(Arrays.deepToString(map));
+        dfs(new Point(0, 0));
+        System.out.println("Hing");
+
+    }
+
+    private static void dfs(Point p) {
+        int jump = map[p.x][p.y];
+        if (jump == -1) { // -1을 만난 경우
+            System.out.println("HaruHaru");
+            System.exit(0); // 프로그램 종료
+        }
+
+        for (int i = 0; i < 2; i++) {
+            int row = p.x + dr[i] * jump;
+            int col = p.y + dc[i] * jump;
+
+            if (row < 0 || col < 0 || row >= N || col >= N) {
+                continue;
+            }
+            if (visit[row][col]) {
+                continue;
+            }
+            visit[row][col] = true;
+            dfs(new Point(row, col));
+        }
     }
 }

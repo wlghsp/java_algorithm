@@ -35,22 +35,20 @@ import java.util.StringTokenizer;
 
 */
 
-
-public class Boj2606_바이러스  {
+public class Boj2606_바이러스 {
 
     static ArrayList<Integer>[] a;
-    static boolean visit[];     // 정점 탐색여부 체크
-    static int n, m, v;     // 정점, 간선, 시작 정점
-    static int count = 0;   // 정점과 연결된 바이러스 걸리는 컴퓨터 수
-
+    static boolean visit[]; // 정점 탐색여부 체크
+    static int n, m, v; // 정점, 간선, 시작 정점
+    static int count = 0; // 정점과 연결된 바이러스 걸리는 컴퓨터 수
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        n = Integer.parseInt(br.readLine());    //컴퓨터 수(정점)
-        m = Integer.parseInt(br.readLine());    //연결된 컴퓨터 쌍의 수(간선)
+        n = Integer.parseInt(br.readLine()); // 컴퓨터 수(정점)
+        m = Integer.parseInt(br.readLine()); // 연결된 컴퓨터 쌍의 수(간선)
         v = 1; // 탐색 시작할 정점의 번호
-        a = new ArrayList[n+1]; // 인덱스 편의상 n+1 설정, 0번째 요소는 사용 X
-        visit = new boolean[n+1]; // 인덱스 편의상 n+1 설정, 0번째 요소는 사용 X
+        a = new ArrayList[n + 1]; // 인덱스 편의상 n+1 설정, 0번째 요소는 사용 X
+        visit = new boolean[n + 1]; // 인덱스 편의상 n+1 설정, 0번째 요소는 사용 X
         for (int i = 0; i <= n; i++) {
             a[i] = new ArrayList<Integer>();
         }
@@ -58,18 +56,17 @@ public class Boj2606_바이러스  {
         StringTokenizer st;
         for (int i = 0; i < m; i++) {
             st = new StringTokenizer(br.readLine(), " ");
-            int u = Integer.parseInt(st.nextToken());   // 간선으로 이어진 정점1
-            int v = Integer.parseInt(st.nextToken());   // 정점1과 간선으로 이어진 정점2
+            int u = Integer.parseInt(st.nextToken()); // 간선으로 이어진 정점1
+            int v = Integer.parseInt(st.nextToken()); // 정점1과 간선으로 이어진 정점2
             // 양방향일 경우 양쪽 다 저장해준다.
             a[u].add(v);
             a[v].add(u);
         }
 
-
-
         System.out.println(dfs(v));
         br.close();
     }
+
     static int dfs(int x) {
         visit[x] = true;
         for (int k : a[x]) {
@@ -78,7 +75,6 @@ public class Boj2606_바이러스  {
                 dfs(k); // 깊이 탐색
             }
         }
-
         return count;
     }
 }

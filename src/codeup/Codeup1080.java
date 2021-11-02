@@ -21,7 +21,15 @@ public class Codeup1080 {
     public static void main(String[] args) throws IOException {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-        
-        
+
+        int start = 0;
+        int sum = 0;
+        while (sum < n) {
+            start++;
+            sum += start;
+        }
+
+        System.out.println(start);
+
     }
 }

@@ -1,6 +1,5 @@
 package java_study;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class ArrayListEx06 {
@@ -30,14 +29,13 @@ public class ArrayListEx06 {
         datas.add(data2);
         datas.add(data3);
 
-
         System.out.println(datas.size());
         // 결과: 3
         System.out.println(datas.toString());
         // 결과: [[1,2,3], [11,22,33], [111,222,333]]
 
         System.out.println(datas.get(0));
-        //결과: [1,2,3]
+        // 결과: [1,2,3]
 
         System.out.println("\n-------");
         // 일반 for문 사용하기
@@ -45,8 +43,8 @@ public class ArrayListEx06 {
             for (int j = 0; j < datas.get(i).size(); j++) {
                 System.out.print("\t" + datas.get(i).get(j));
                 // 결과
-                // 1    2   3
-                // 11   22 33
+                // 1 2 3
+                // 11 22 33
                 // 111 222 333
             }
             System.out.println();
@@ -54,13 +52,9 @@ public class ArrayListEx06 {
 
         System.out.println("\n--------");
         // 향상된 for 문 사용하기
-        for (ArrayList<String> data: datas
-             ) {
+        for (ArrayList<String> data : datas) {
             System.out.println(data);
         }
-
-
-
 
     }
 }
