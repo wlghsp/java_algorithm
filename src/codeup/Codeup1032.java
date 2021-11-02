@@ -3,12 +3,17 @@ package codeup;
 import java.io.IOException;
 import java.util.Scanner;
 
-public class Main {
+/*
+10진수를 입력받아 16진수(hexadecimal)로 출력해보자.
+
+
+*/
+
+public class Codeup1032 {
     public static void main(String[] args) throws IOException {
         Scanner sc = new Scanner(System.in);
-        double num = sc.nextDouble();
-        String str = String.format("%.11f", num);
-        System.out.println(str);
+        int num = sc.nextInt();
+        System.out.printf("%x", num);
     }
 
 }
