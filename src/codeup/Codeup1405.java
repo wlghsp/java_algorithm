@@ -1,6 +1,5 @@
 package codeup;
 
-
 /*
 n개의 숫자가 입력되면,
 n개의 숫자를 왼쪽으로 하나씩 돌려서 출력하시오.
@@ -35,6 +34,7 @@ import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
+import java.util.ArrayList;
 import java.util.StringTokenizer;
 
 public class Codeup1405 {
@@ -43,16 +43,22 @@ public class Codeup1405 {
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         StringBuilder sb = new StringBuilder();
         int n = Integer.parseInt(br.readLine());
-        int[] arr = new int[n];
+        ArrayList<Integer> list = new ArrayList<>();
         StringTokenizer st = new StringTokenizer(br.readLine());
-        for (int i = 0; i < arr.length; i++) {
-            arr[i] = Integer.parseInt(st.nextToken());
+
+        for (int i = 0; i < n; i++) {
+            list.add(Integer.parseInt(st.nextToken()));
         }
-        
-        
 
-
-
+        for (int i = 0; i < list.size(); i++) {
+            for (int j = 0; j < list.size(); j++) {
+                sb.append(list.get(j)).append(" ");
+            }
+            sb.append("\n");
+            int num = list.get(0);
+            list.remove(0);
+            list.add(num);
+        }
         bw.write(sb.toString());
         bw.flush();
         bw.close();
