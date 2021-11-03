@@ -5,7 +5,6 @@ package codeup;
 1099 : [기초-2차원배열] 성실한 개미
 
 영일이는 생명과학에 관심이 생겨 왕개미를 연구하고 있었다.
-
 왕개미를 유심히 살펴보던 중 특별히 성실해 보이는 개미가 있었는데,
 그 개미는 개미굴에서 나와 먹이까지 가장 빠른 길로 이동하는 것이었다.
 
@@ -67,42 +66,69 @@ public class Codeup1099 {
   public static void main(String[] args) throws IOException {
     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-    StringTokenizer st = new StringTokenizer(br.readLine());
-    /*
-      첫 줄에 격자판의 세로(h), 가로(w) 가 공백을 두고 입력되고,
-      두 번째 줄에 놓을 수 있는 막대의 개수(n)
-      세 번째 줄부터 각 막대의 길이(l), 방향(d), 좌표(x, y)가 입력된다.
-    */
-    int h = Integer.parseInt(st.nextToken());
-    int w = Integer.parseInt(st.nextToken());
-    int[][] arr = new int[101][101];
-
-    int n = Integer.parseInt(br.readLine());
-    for (int i = 0; i < n; i++) {
+    int[][] arr = new int[11][11];
+    int x =2;
+    int y =2;
+    StringTokenizer st;
+    for (int i = 1; i < arr.length; i++) {
       st = new StringTokenizer(br.readLine());
-      int l = Integer.parseInt(st.nextToken());
-      int d = Integer.parseInt(st.nextToken());
-      int x = Integer.parseInt(st.nextToken());
-      int y = Integer.parseInt(st.nextToken());
-      if (d == 0) { // 0 가로방향
-        for (int j = y; j < y + l; j++) {
-          arr[x][j] = 1;
-        }
-      } else { // 1이면 세로방향
-        for (int j = x; j < x + l; j++) {
-          arr[j][y] = 1;
-        }
+      for (int j = 1; j < arr.length; j++) {
+        arr[i][j] = Integer.parseInt(st.nextToken());
       }
     }
+    // 개미 출발위치는 (2,2)
+    // 미로 상자의 구조가 0(갈 수 있는 곳), 1(벽 또는 장애물)로 주어지고, 먹이는 2이다.
+    // 개미의 이동경로는 9로 바꾼다. 
+    // 1. for문 풀이
+    // loop1:for (int i = x; i < arr.length; i++) {
+    //   loop2:for (int j = y; j < arr.length; j++) {
+    //     if (arr[i][j] == 0) {// 갈 수 있음 
+    //       arr[i][j] = 9;
+    //     } else if (arr[i][j]==1) { // 장애물
+    //       x++;
+    //       y = j-1;
+    //       break loop2; // j열 변화는 오른쪽 이동인데 안쪽 for문 탈출로 오른쪽 이동 중단
+    //     } else if (arr[i][j] ==2) { // 먹이
+    //       arr[i][j] = 9;
+    //       break loop1; // 바깥쪽 for문 탈출로 반복 중단
+    //     }
+    //   }
+    // }
+
+    // 2. while문 풀이
+    while (true) {
+      if (arr[x][y]==2) {
+        arr[x][y] = 9;
+        break;
+      }
+      // 오른쪽에 장애물 여부 파악, 이동 진행 
+      // 오른쪽에 벽이 존재하여 이동 불가능
+      if (arr[x][y+1] ==1) {  
+        if (arr[x+1][y] == 1) break;
+        else x++;
+      }
+      else if (arr[x][y+1] != 1) y++; // 이동 가능한 경우는 오른쪽 이동  
+      
+      // 위의 이동 후 다시 한번 먹이 여부 파악, 위에서 오른쪽 아래쪽 확인후 이동하였기에 2인지만 확인하면 됨. 
+      if (arr[x][y]==2) { // 먹이 찾았다. 
+        arr[x][y] = 9;  // 9로 해놓고 
+        break;          // 반복문 종료 
+      }
+
+      arr[x][y] = 9; //  2가 아닌 경우 0이므로 9로 해놓음  
+
+    }
+    arr[2][2] = 9; // 최초 시작한 자리도 9로 해놓기
+
+
 
     StringBuilder sb = new StringBuilder();
-    for (int i = 1; i <= h; i++) {
-      for (int j = 1; j <= w; j++) {
+    for (int i = 1; i < arr.length; i++) {
+      for (int j = 1; j < arr.length; j++) {
         sb.append(arr[i][j]).append(" ");
       }
       sb.append("\n");
     }
-
     bw.write(sb.toString());
     bw.flush();
     bw.close();
