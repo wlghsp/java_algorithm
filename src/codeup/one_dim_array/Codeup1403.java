@@ -1,4 +1,4 @@
-package codeup;
+package codeup.one_dim_array;
 
 
 /*

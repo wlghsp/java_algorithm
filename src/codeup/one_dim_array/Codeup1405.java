@@ -1,4 +1,4 @@
-package codeup;
+package codeup.one_dim_array;
 
 /*
 n개의 숫자가 입력되면,
