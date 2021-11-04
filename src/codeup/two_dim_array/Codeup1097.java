@@ -1,4 +1,4 @@
-package codeup.basic100;
+package codeup.two_dim_array;
 
 
 /*

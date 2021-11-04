@@ -1,4 +1,4 @@
-package codeup;
+package codeup.nested_loop;
 
 /*
 어떤 수 n을 입력받으면 다음과 같은 삼각형을 출력한다.
@@ -32,16 +32,18 @@ public class Codeup1358 {
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         StringBuilder sb = new StringBuilder();
         int n = Integer.parseInt(br.readLine());
-        
-        for (int i = 0; i < n-2; i++) {
-            for (int j = 0; j < n-3; j++) {
-                System.out.print(" ");
+        int space = (n -1)/2;  
+        for (int i = 1; i <= n; i+= 2) {
+            for (int j = 1; j <= space; j++) {
+                sb.append(" ");
             }
-            for (int j = 0; j < n; j += 2) {
-                System.out.println("*");
+            for (int j = 1; j <= i; j++) {
+                sb.append("*");
             }
+           
+            sb.append("\n");
+            space--;
         }
-
         bw.write(sb.toString());
         bw.flush();
         bw.close();
