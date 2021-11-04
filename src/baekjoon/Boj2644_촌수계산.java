@@ -1,5 +1,9 @@
 package baekjoon;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
 /*
 우리 나라는 가족 혹은 친척들 사이의 관계를 촌수라는 단위로 표현하는 독특한 문화를 가지고 있다. 
 이러한 촌수는 다음과 같은 방식으로 계산된다. 
@@ -40,7 +44,8 @@ package baekjoon;
 
 
 public class Boj2644_촌수계산 {
-    public static void main(String[] args) {
-        
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int n = Integer.parseInt(br.readLine());
     }
 }
