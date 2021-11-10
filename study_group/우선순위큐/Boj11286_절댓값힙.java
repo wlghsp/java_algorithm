@@ -1,4 +1,4 @@
-package baekjoon;
+package baekjoon.silverⅠ;
 /*
 
 절댓값 힙은 다음과 같은 연산을 지원하는 자료구조이다.
@@ -56,9 +56,27 @@ x가 0이라면 배열에서 절댓값이 가장 작은 값을 출력하고 그 
 
 */
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.PriorityQueue;
 
 public class Boj11286_절댓값힙 {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException{
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int N = Integer.parseInt(br.readLine());
         
+        // 절댓값이 같은 경우 그 중에서 작은 값으로 오름차순 정렬하고, 아닌경우 절댓값이 작은 순서로 오름차순 정렬
+        PriorityQueue<Integer> queue = new PriorityQueue<>((o1, o2) -> Math.abs(o1) == Math.abs(o2) ? Integer.compare(o1, o2) : Integer.compare(Math.abs(o1), Math.abs(o2)));
+
+        for (int i = 0; i < N; i++) {
+            int val = Integer.parseInt(br.readLine());
+            if (val == 0) {
+                if (queue.isEmpty()) System.out.println("0");
+                else System.out.println(queue.poll()); 
+            } else {
+                queue.add(val);
+            }
+        }
     }
 }
