@@ -1,4 +1,4 @@
-package baekjoon.복습;
+package baekjoon.silverⅢ;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -18,10 +18,15 @@ import java.util.StringTokenizer;
 
 
 입력
-첫째 줄에는 컴퓨터의 수가 주어진다. 컴퓨터의 수는 100 이하이고 각 컴퓨터에는 1번 부터 차례대로 번호가 매겨진다. 둘째 줄에는 네트워크 상에서 직접 연결되어 있는 컴퓨터 쌍의 수가 주어진다. 이어서 그 수만큼 한 줄에 한 쌍씩 네트워크 상에서 직접 연결되어 있는 컴퓨터의 번호 쌍이 주어진다.
+첫째 줄에는 컴퓨터의 수가 주어진다. 
+컴퓨터의 수는 100 이하이고 각 컴퓨터에는 1번 부터 차례대로 번호가 매겨진다. 
+둘째 줄에는 네트워크 상에서 직접 연결되어 있는 컴퓨터 쌍의 수가 주어진다. 
+이어서 그 수만큼 한 줄에 한 쌍씩 네트워크 상에서 직접 연결되어 있는 컴퓨터의 
+번호 쌍이 주어진다.
 
 출력
-1번 컴퓨터가 웜 바이러스에 걸렸을 때, 1번 컴퓨터를 통해 웜 바이러스에 걸리게 되는 컴퓨터의 수를 첫째 줄에 출력한다.
+1번 컴퓨터가 웜 바이러스에 걸렸을 때, 1번 컴퓨터를 통해 웜 바이러스에 걸리게 되는 
+컴퓨터의 수를 첫째 줄에 출력한다.
 
 7
 6
@@ -35,7 +40,7 @@ import java.util.StringTokenizer;
 4
 
 */
-
+// 참고 https://zzang9ha.tistory.com/40
 public class Boj2606_바이러스 {
 
     static ArrayList<Integer>[] a;
@@ -50,10 +55,9 @@ public class Boj2606_바이러스 {
         v = 1; // 탐색 시작할 정점의 번호
         a = new ArrayList[n + 1]; // 인덱스 편의상 n+1 설정, 0번째 요소는 사용 X
         visit = new boolean[n + 1]; // 인덱스 편의상 n+1 설정, 0번째 요소는 사용 X
-        for (int i = 0; i <= n; i++) {
+        for (int i = 1; i <= n; i++) {
             a[i] = new ArrayList<Integer>();
         }
-        System.out.println(Arrays.deepToString(a));
 
         StringTokenizer st;
         for (int i = 0; i < m; i++) {
@@ -64,7 +68,6 @@ public class Boj2606_바이러스 {
             a[u].add(v);
             a[v].add(u);
         }
-        System.out.println(Arrays.deepToString(a));
 
 
         System.out.println(dfs(v));

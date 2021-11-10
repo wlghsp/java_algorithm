@@ -1,4 +1,4 @@
-package baekjoon;
+package baekjoon.담에풀기;
 
 /*
 N×M크기의 배열로 표현되는 미로가 있다.
