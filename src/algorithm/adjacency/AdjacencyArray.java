@@ -1,4 +1,4 @@
-package java_study.adjacency;
+package algorithm.adjacency;
 
 class ArrGraph {
     private int[][] arrGraph;

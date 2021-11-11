@@ -1,4 +1,4 @@
-package java_study.dfs;
+package algorithm.dfs;
 
 import java.util.Arrays;
 import java.util.Scanner;

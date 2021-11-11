@@ -1,4 +1,4 @@
-package java_study.bfs;
+package algorithm.bfs;
 
 import java.util.Arrays;
 import java.util.LinkedList;

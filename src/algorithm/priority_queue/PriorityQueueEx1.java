@@ -1,4 +1,4 @@
-package java_study.priority_queue;
+package algorithm.priority_queue;
 
 import java.util.Collections;
 import java.util.PriorityQueue;

@@ -1,4 +1,4 @@
-package java_study.codingtest.입출력;
+package algorithm.codingtest.입출력;
 
 import java.io.BufferedReader;
 import java.io.IOException;

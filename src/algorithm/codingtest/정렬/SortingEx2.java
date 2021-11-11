@@ -1,4 +1,5 @@
-package java_study.codingtest.정렬;
+package algorithm.codingtest.정렬;
+
 
 import java.io.IOException;
 import java.util.ArrayList;
