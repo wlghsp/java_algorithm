@@ -51,7 +51,7 @@ public class Boj1927_최소힙 {
 
         int n = Integer.parseInt(br.readLine());
         // 오름차순 우선순위 큐 (낮은 숫자부터 정렬)
-        PriorityQueue<Integer> queue = new PriorityQueue<>(Comparator.comparingInt(x -> x));
+        PriorityQueue<Integer> queue = new PriorityQueue<>();
         
         for (int i = 0; i < n; i++) {
             int val = Integer.parseInt(br.readLine()); // 한 줄 씩 입력 숫자 받기 
