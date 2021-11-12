@@ -12,11 +12,10 @@ s 	    return
 "1234" 	true
 
 
-
 */
 
 public class 문자열다루기기본 {
-
+    // 1. 아스키코드 활용 숫자 판별 
     public static boolean solution1(String s) {
         char tmp;
         if (s.length() != 4 && s.length() != 6) return false;
@@ -27,6 +26,7 @@ public class 문자열다루기기본 {
         return true;
     }
 
+    // 2. Integer.parseInt의 예외 발생 활용.
     public static boolean solution2(String s) {
         int length = s.length();
         if (length == 4 || length == 6) {
