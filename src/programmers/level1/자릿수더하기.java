@@ -23,18 +23,28 @@ N 	answer
 */
 
 public class 자릿수더하기 {
-
     // 내 풀이
-    public static int solution(int n) {
+    public static int solution1(int n) {
       String str = String.valueOf(n);
       int result = 0;
       for (int i = 0; i < str.length(); i++) result += (str.charAt(i) -'0');
       return result;
     }
 
+    // 다른 사람 풀이.. 형변환 없이 이렇게 풀어줘야 함. 
+    public static int solution2(int n) {
+        int result = 0;
+        // 1의 자릿수만 계속 더해 가는 방법
+        while (true) {
+            result += n % 10; // 매번 1의 자리를 더함. 
+            if (n < 10) break;
+            n = n / 10; // 맨 뒤 1의 자리 줄임 10의 자릿수가 1의 자릿수 됨. 
+        }
+        return result;
+      }
 
     public static void main(String[] args) {
-        System.out.println(solution(123));
-        System.out.println(solution(987));
+        System.out.println(solution1(123));
+        System.out.println(solution1(987));
     }
 }
