@@ -1,5 +1,7 @@
 package programmers.level1;
 
+import java.util.Arrays;
+
 /*
 점심시간에 도둑이 들어, 일부 학생이 체육복을 도난당했습니다. 다행히 여벌 체육복이 있는 학생이 이들에게 체육복을 빌려주려 합니다. 
 학생들의 번호는 체격 순으로 매겨져 있어, 바로 앞번호의 학생이나 바로 뒷번호의 학생에게만 체육복을 빌려줄 수 있습니다. 
@@ -35,8 +37,69 @@ n 	lost 	reserve 	return
 
 
 public class 체육복 {
-    public int solution(int n, int[] lost, int[] reserve) {
+    public int solution1(int n, int[] lost, int[] reserve) {
+        int answer = n - lost.length; // 전체에서 잃어버린 사람 빼서 현재 시점의 체육수업 가능자 수 
+
+        Arrays.sort(lost);
+        Arrays.sort(reserve);
+        
+        // 여분 체육복이 있지만 체육복을 잃어버린 학생 제거
+        for (int i = 0; i < lost.length; i++) {
+            for (int j = 0; j < reserve.length; j++) {
+                if (lost[i] == reserve[j]) {
+                    answer++; // lost에서 빠지므로 체육가능자 증가
+                    lost[i] = reserve[j] = -10; // -1로 처리 해줌 
+                    break;
+                }
+            }
+        }
+
+        // 체육복 빌려주기
+        for (int lostPerson : lost) {
+            for (int i = 0; i < reserve.length; i++) {
+                if (reserve[i] == lostPerson -1 || reserve[i] == lostPerson + 1) {
+                    answer++;
+                    reserve[i] = -10; // 체육복빌려줬으니 -1 처리하여 다시 빌려줄 일 없게 함.  
+                    break; // 안쪽 for문 종료 후 바깥쪽for문 돌리게 함. 한 명의 인원 구하기 
+                }
+            }
+        }
+        return answer;
+    }
+
+    public int solution2(int n, int[] lost, int[] reserve) {
+        int[] all = new int[n];
+        for (int i : reserve) {
+            all[i-1]++;
+        }
+
+        for (int i : lost) {
+            all[i-1]--;
+        }
+
+        System.out.println(Arrays.toString(all));
+        for (int i = 0; i < all.length; i++) {
+            if (all[i] < 0) {
+                if (i != all.length -1 && all[i+1] > 0) {
+                    all[i]++;
+                    all[i+1]--;
+                } else if (i != 0 && all[i-1] > 0) {
+                    all[i]++;
+                    all[i-1]++;
+                }
+                    
+                
+            }
+        }
+
         int answer = 0;
+        System.out.println(Arrays.toString(all));
+        for (int i = 0; i < all.length; i++) {
+            if (!(all[i] < 0)) {
+                answer++;
+            }
+        }
+
         return answer;
     }
     
@@ -46,7 +109,7 @@ public class 체육복 {
         int n = 5;
         int[] lost = {2, 4};
         int[] reserve = {1, 3, 5};
-        System.out.println(sol.solution(n, lost, reserve));
+        System.out.println(sol.solution2(n, lost, reserve));
 
     }
 }
