@@ -1,6 +1,7 @@
 package programmers.level1;
 
 
+
 /*
 array의 각 element 중 divisor로 나누어 떨어지는 값을 오름차순으로 정렬한 배열을 반환하는 함수, solution을 작성해주세요.
 divisor로 나누어 떨어지는 element가 하나도 없다면 배열에 -1을 담아 반환하세요.
@@ -30,16 +31,44 @@ arr의 모든 원소는 1으로 나누어 떨어집니다. 원소를 오름차�
 
 
 */
-
+import java.util.ArrayList;
+import java.util.Arrays;
 
 public class 나누어떨어지는숫자배열 {
     
-    static int[] solution(int[] arr, int divisor) {
+    static int[] solution1(int[] arr, int divisor) {
         int[] answer = {};
+        ArrayList<Integer> list = new ArrayList<>();
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] % divisor == 0) {
+                list.add(arr[i]);
+            }
+        }
+        if (list.size() == 0) {
+            return new int[]{-1};
+        }
+        answer = new int[list.size()];
+        for (int i = 0; i < answer.length; i++) {
+            answer[i] = list.get(i);
+        }
+        Arrays.sort(answer);
+        return answer;
+    }
+
+    // stream 쓰는 다름 사람 풀이 
+    static int[] solution2(int[] arr, int divisor) {
+        int[] answer = Arrays.stream(arr).filter(factor -> factor % divisor == 0).toArray();
+        if (answer.length == 0) answer = new int[]{-1};
+        Arrays.sort(answer);
         return answer;
     }
 
     public static void main(String[] args) {
-        
+        int[] arr = {3,2,6};
+        int divisor = 10;
+        int[] result = solution2(arr, divisor);
+        for (int i : result) {
+            System.out.print(i +" ");
+        }
     }
 }
