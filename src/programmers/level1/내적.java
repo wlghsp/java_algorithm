@@ -28,15 +28,15 @@ a 	            b 	      result
 public class 내적 {
     
     static int solution(int[] a, int[] b) {
-        int answer = 1234567890;
-
-
-        return answer;
+        int i=0, j=0, sum =0;
+        while (i < a.length && j < b.length) sum += a[i++] * b[j++];
+        return sum;
     }
     
     public static void main(String[] args) {
-        int[] a= {1,2,3,4};
-        int[] b= {-3,-1,0,2};
+        int[] a= {-1,0,1};
+        int[] b= {1,0,-1};
+        System.out.println(solution(a, b));
 
     }
 }
