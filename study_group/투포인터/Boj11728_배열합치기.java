@@ -30,7 +30,6 @@ package baekjoon.silverⅤ;
 
  */
 
-
 import java.io.*;
 import java.util.Arrays;
 import java.util.StringTokenizer;
@@ -47,49 +46,55 @@ public class Boj11728_배열합치기 {
         int[] bArr = new int[M];
         int[] result = new int[N + M];
         st = new StringTokenizer(br.readLine());
-        for (int i = 0; i < N; i++) aArr[i] = Integer.parseInt(st.nextToken());
+        for (int i = 0; i < N; i++)
+            aArr[i] = Integer.parseInt(st.nextToken());
         st = new StringTokenizer(br.readLine());
-        for (int j = 0; j < M; j++) bArr[j] = Integer.parseInt(st.nextToken());
+        for (int j = 0; j < M; j++)
+            bArr[j] = Integer.parseInt(st.nextToken());
         Arrays.sort(aArr);
         Arrays.sort(bArr);
         int a = 0, b = 0, c = 0;
-        while (a < N && b < M ) {
-            if (aArr[a] < bArr[b]) result[c++] = aArr[a++];
-            else result[c++] = bArr[b++];
+        while (a < N && b < M) {
+            if (aArr[a] < bArr[b])
+                result[c++] = aArr[a++];
+            else
+                result[c++] = bArr[b++];
         }
-        while (a < N) result[c++] = aArr[a++];
-        while (b < M) result[c++] = bArr[b++];
-        for (int k = 0; k < result.length; k++) sb.append(result[k] +" ");
+        while (a < N)
+            result[c++] = aArr[a++];
+        while (b < M)
+            result[c++] = bArr[b++];
+        for (int k = 0; k < result.length; k++)
+            sb.append(result[k] + " ");
         bw.write(sb.toString());
         bw.flush();
         bw.close();
         br.close();
     }
 
-
-//    public static void main(String[] args) throws IOException {
-//        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-//        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-//        StringBuilder sb = new StringBuilder();
-//        StringTokenizer st = new StringTokenizer(br.readLine());
-//        int N = Integer.parseInt(st.nextToken());
-//        int M = Integer.parseInt(st.nextToken());
-//        int[] result = new int[N + M];
-//        st = new StringTokenizer(br.readLine());
-//        for (int i = 0; i < N; i++) {
-//            result[i] = Integer.parseInt(st.nextToken());
-//        }
-//        st = new StringTokenizer(br.readLine());
-//        for (int i = N; i < N+M; i++) {
-//            result[i] = Integer.parseInt(st.nextToken());
-//        }
-//        Arrays.sort(result);
-//        for (int i = 0; i < result.length; i++) {
-//            sb.append(result[i] +" ");
-//        }
-//        bw.write(sb.toString());
-//        bw.flush();
-//        bw.close();
-//        br.close();
-//    }
+    // public static void main(String[] args) throws IOException {
+    // BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    // BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+    // StringBuilder sb = new StringBuilder();
+    // StringTokenizer st = new StringTokenizer(br.readLine());
+    // int N = Integer.parseInt(st.nextToken());
+    // int M = Integer.parseInt(st.nextToken());
+    // int[] result = new int[N + M];
+    // st = new StringTokenizer(br.readLine());
+    // for (int i = 0; i < N; i++) {
+    // result[i] = Integer.parseInt(st.nextToken());
+    // }
+    // st = new StringTokenizer(br.readLine());
+    // for (int i = N; i < N+M; i++) {
+    // result[i] = Integer.parseInt(st.nextToken());
+    // }
+    // Arrays.sort(result);
+    // for (int i = 0; i < result.length; i++) {
+    // sb.append(result[i] +" ");
+    // }
+    // bw.write(sb.toString());
+    // bw.flush();
+    // bw.close();
+    // br.close();
+    // }
 }
