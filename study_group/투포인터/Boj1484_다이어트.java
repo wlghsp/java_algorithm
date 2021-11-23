@@ -44,6 +44,7 @@ public class Boj1484_다이어트 {
         int b = 2; // 현재 몸무게
         
         long[] powArr = new long[MAX + 1];
+        
         for (int i = 0; i < powArr.length; i++) {
             powArr[i] = i * i;
         }
@@ -51,7 +52,9 @@ public class Boj1484_다이어트 {
         List<Integer> result = new ArrayList<>();
 
         while (true) {
+
             long diff = (long) (Math.pow(b, 2)) - (long) Math.pow(a, 2);
+
             if ((b - a == 1) && (diff > 100000)) break;
 
             if (diff < G) {
@@ -60,12 +63,14 @@ public class Boj1484_다이어트 {
             if (diff > G) {
                 a++;
             }
+
             if (diff == G) {
                 result.add(b);
                 b++;
             }
         }
         Collections.sort(result);
+
         if (result.isEmpty() || G == 1) {
             System.out.println(-1);
         } else {

@@ -3,10 +3,7 @@ package baekjoon.silverⅣ;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.StringTokenizer;
+import java.util.*;
 
 /*
     입력으로 사진을 나타내는 MxN 행렬 A 가 주어진다. 행렬의 각 원소는 사진 속 한 픽셀의 밝기를 나타내는데, 0이면 가장 어두운 것을 의미하고, K 면 가장 밝은 것을 의미한다.
@@ -91,6 +88,7 @@ public class Boj14602_소금과후추 {
                 arr[i][j] = Integer.parseInt(st.nextToken());
             }
         }
+        System.out.println(Arrays.deepToString(arr));
 
         StringBuilder sb = new StringBuilder();
         int bm = m-w + 1, bn = n - w + 1;
@@ -113,6 +111,7 @@ public class Boj14602_소금과후추 {
                 list.add(arr[i][j]);
             }
         }
+
         Collections.sort(list);
 
         return list.get(w*w/2);

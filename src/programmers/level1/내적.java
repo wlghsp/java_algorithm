@@ -29,7 +29,10 @@ public class 내적 {
     
     static int solution(int[] a, int[] b) {
         int i=0, j=0, sum =0;
-        while (i < a.length && j < b.length) sum += a[i++] * b[j++];
+
+        while (i < a.length && j < b.length)
+            sum += a[i++] * b[j++];
+
         return sum;
     }
     
