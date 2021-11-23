@@ -39,5 +39,19 @@ public class StreamEx4 {
         strList.stream().filter(s -> s.startsWith("H")).findFirst().ifPresent(System.out::println);
         strList.parallelStream().filter(s -> s.startsWith("H")).findAny().ifPresent(System.out::println);
 
+
+        // 4) anyMatch(), allMatch(), noneMatch()
+        // 스트림의 요소 중 특정 조건을 만족하는 요소를 검사하는 메서드
+        // 원소 중 일부, 전체 혹은 일치하는 것이 없는 경우를 검사하고 boolean값을 리턴합니다.
+        // noneMatch()의 경우 일치하는 것이 하나도 없을 때 true.
+
+        boolean result1 = strList.stream().anyMatch(s -> s.startsWith("H")); // true
+        boolean result2 = strList.stream().allMatch(s -> s.startsWith("H")); // false
+        boolean result3 = strList.stream().noneMatch(s -> s.startsWith("T")); // true
+        System.out.printf("%b, %b, %b", result1, result2, result3);
+
+
+
+
     }
 }
