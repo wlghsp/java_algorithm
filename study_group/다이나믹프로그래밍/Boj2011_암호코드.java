@@ -21,7 +21,7 @@ package baekjoon.silverⅠ;
 암호가 잘못되어 암호를 해석할 수 없는 경우에는 0을 출력한다.
 
 25114
-`
+
 6
 
 1111111111
@@ -53,16 +53,20 @@ public class Boj2011_암호코드 {
         int length = str.length();
         long[] dp = new long[length+1]; dp[0] = dp[1] = 1;
 
-        if(str.charAt(0) == '0') System.out.print(0);
+        if(str.charAt(0) == '0') System.out.print(0);  // 입력값이 0으로 시작하거나,  10, 20은 알파벳이 있으나, 30, 40은 없어서 암호해독 불가
         else if(str.charAt(length-1) == '0' && str.charAt(length-2) != '1' && str.charAt(length-2) != '2') System.out.print(0);
         else {
+
             for(int i = 2; i <= length; i++) {
-                int tmp = Integer.parseInt(str.charAt(i-1) + "");
+
+                int tmp = Integer.parseInt(str.charAt(i-1) + ""); // i-1인덱스의 숫자를 String변환
                 if(tmp > 0) dp[i] = dp[i-1] % 1000000;
 
                 tmp += Integer.parseInt(str.charAt(i-2) + "")*10;
                 if(10 <= tmp && tmp <= 26) dp[i] = (dp[i] + dp[i-2]) % 1000000;
+
             }
+
             System.out.print(dp[length]);
         }
     }

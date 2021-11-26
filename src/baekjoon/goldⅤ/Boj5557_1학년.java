@@ -1,4 +1,4 @@
-package baekjoon;
+package baekjoon.goldⅤ;
 
 /*
 상근이가 1학년 때, 덧셈, 뺄셈을 매우 좋아했다.
