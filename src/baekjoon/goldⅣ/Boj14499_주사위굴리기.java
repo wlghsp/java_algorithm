@@ -31,8 +31,101 @@ package baekjoon.goldⅣ;
 
  */
 
-public class Boj14499_주사위굴리기 {
-    public static void main(String[] args) {
+//블로그 참고함.... 공부하자..
 
+import java.io.*;
+import java.util.*;
+
+public class Boj14499_주사위굴리기 {
+  static int n, m, x, y, k;
+  static int map[][];
+  static int dx[] = { 0, 0, -1, 1 };
+  static int dice[];
+  static int dy[] = { 1, -1, 0, 0 };
+  static Queue<Integer> q = new LinkedList<>();
+  static ArrayList<Integer> direction = new ArrayList<>();
+
+  public static void main(String[] args) throws IOException {
+    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+    String[] t = br.readLine().split(" ");
+
+    n = Integer.parseInt(t[0]);
+    m = Integer.parseInt(t[1]);
+    x = Integer.parseInt(t[2]);
+    y = Integer.parseInt(t[3]);
+    k = Integer.parseInt(t[4]);
+
+    map = new int[n][m];
+    dice = new int[7];
+
+    for (int i = 0; i < n; i++) {
+      String[] input = br.readLine().split(" ");
+      for (int j = 0; j < input.length; j++) {
+        map[i][j] = Integer.parseInt(input[j]);
+      }
     }
+
+    String order[] = br.readLine().split(" ");
+
+    for (int i = 0; i < order.length; i++) {
+      q.add(Integer.parseInt(order[i]));
+    }
+    solve();
+  }
+
+  public static void solve() {
+    while (!q.isEmpty()) {
+      int d = q.poll();
+      int nx = x + dx[d - 1];
+      int ny = y + dy[d - 1];
+      if (nx >= 0 && ny >= 0 && nx < n && ny < m) {
+        change_dice(d);
+        if (map[nx][ny] == 0) {
+          map[nx][ny] = dice[6];
+        } else {
+          dice[6] = map[nx][ny];
+          map[nx][ny] = 0;
+        }
+        System.out.println(dice[1]);
+        x = nx;
+        y = ny;
+      }
+    }
+  }
+
+  public static void change_dice(int d) {
+    int temp[] = new int[7];
+    for (int i = 1; i <= 6; i++) {
+      temp[i] = dice[i];
+    }
+
+    switch (d) {
+      case 1: // 동쪽으로 굴릴때
+        dice[1] = temp[2];
+        dice[3] = temp[1];
+        dice[6] = temp[3];
+        dice[2] = temp[6];
+        break;
+      case 2: // 서쪽으로 굴릴 때
+        dice[1] = temp[3];
+        dice[2] = temp[1];
+        dice[6] = temp[2];
+        dice[3] = temp[6];
+        break;
+      case 3: // 북쪽으로 굴릴 때
+        dice[4] = temp[1];
+        dice[6] = temp[4];
+        dice[5] = temp[6];
+        dice[1] = temp[5];
+        break;
+      case 4: // 남쪽으로 굴릴 때
+        dice[5] = temp[1];
+        dice[6] = temp[5];
+        dice[4] = temp[6];
+        dice[1] = temp[4];
+        break;
+    }
+
+  }
 }
