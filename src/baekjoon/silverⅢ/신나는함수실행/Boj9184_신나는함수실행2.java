@@ -1,4 +1,4 @@
-package baekjoon.silverⅢ;
+package baekjoon.silverⅢ.신나는함수실행;
 
 
 /*
