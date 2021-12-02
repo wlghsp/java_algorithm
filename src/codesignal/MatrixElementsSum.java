@@ -20,7 +20,13 @@ Example
     the output should be
     solution(matrix) = 9.
 
+[[1,1,1,0], 
+ [0,5,0,1], 
+ [2,1,3,10]]
+ 
 
+9
+1 1 1 5 1 10
 
 
 Input/Output
@@ -44,14 +50,29 @@ Input/Output
 
 public class MatrixElementsSum {
 
-    static int solution(int[][] matrix) {
+    static int solution(int[][] m) {
+        int answer = 0;
 
+        for (int j = 0; j < m[0].length; j++) { // 열을 기준으로 행을 체크 
+            for (int i = 0; i < m.length; i++) {
 
-        return 0;
+                if (m[i][j] == 0) { // 0이 나올 경우에는 그 열은 종료하고 다음 열로 이동 
+                    break;
+                } else {
+                    answer += m[i][j];
+                }
+                
+            }
+        }
+
+        return answer;
     }
 
 
     public static void main(String[] args) {
-
+        int[][] arr = new int[][]{{1,1,1,0},
+              {0,5,0,1},
+              {2,1,3,10}};
+        System.out.println(solution(arr));
     }
 }
