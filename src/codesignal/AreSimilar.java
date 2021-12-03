@@ -53,17 +53,47 @@ Input/Output
  */
 
 
+import java.util.Arrays;
+
 public class AreSimilar {
 
+    static int[] swap(int[] arr, int i, int j) {
+        int temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+
+        return arr;
+    }
 
     static boolean solution(int[] a, int[] b) {
-
-
-        return true;
+        boolean answer = false;
+        loop:for (int i = 0; i < a.length; i++) {
+            if(Arrays.equals(a, b)) {
+                answer = true;
+                break loop;
+            }
+            for (int j = 0; j < a.length; j++) {
+                if(a[i] != a[j]){
+                    int[] t = swap(a, i, j);
+                    if (Arrays.equals(t, b)) {
+                        answer = true;
+                        break loop;
+                    }
+                }
+            }
+        }
+        return answer;
     }
 
 
-    public static void main(String[] args) {
 
+    public static void main(String[] args) {
+        int[] a = {1, 2, 3};
+        int[] b = {2, 1, 3};
+        int[] c = {1, 2, 2};
+        int[] d = {2, 1, 1};
+
+        System.out.println(solution(a, b)); // true
+        System.out.println(solution(c, d)); // false
     }
 }
