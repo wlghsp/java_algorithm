@@ -37,15 +37,14 @@ public class All_Longest_Strings {
 
 
     static String[] solution(String[] arr) {
-        String[] answer = {};
-        int maxLen = Integer.MIN_VALUE;
+        int maxLen = 0;
 
         for (int i = 0; i < arr.length; i++) {
-            int temLen = arr[i].length();
-            maxLen = Math.max(maxLen, temLen);
+           if (arr[i].length() > maxLen) {
+               maxLen = arr[i].length();
+           }
         }
 
-        System.out.println(maxLen);
         final int longest = maxLen;
 
         // ArrayList<String> list = new ArrayList<>();
@@ -61,11 +60,29 @@ public class All_Longest_Strings {
         return Stream.of(arr).filter(s -> s.length() == longest).toArray(String[]:: new);
 
     }
-    
+
+    static String[] solution1(String[] inputArray) {
+
+        String l = ""; //full string with "-" separator
+
+        for( String s: inputArray )
+        {
+            //length is first index of substring
+            //if list has same size strings, add this one
+            if( l.indexOf("-") == s.length() )
+                l += s + "-";
+                //reset if list has smaller strings
+            else if ( l.indexOf("-") < s.length() )
+                l = s + "-";
+        }
+
+        return l.split( "-" );
+    }
+
 
 
     public static void main(String[] args) {
         String[] arr= {"aba", "aa", "ad", "vcd", "aba"};
-        System.out.println(Arrays.toString(solution(arr)));
+        System.out.println(Arrays.toString(solution1(arr)));
     }
 }

@@ -37,7 +37,6 @@ Input/Output
 
 public class IsLucky {
     
-    
 
     static boolean solution(int n) {
 
@@ -53,13 +52,43 @@ public class IsLucky {
             secondHalf += digits[i];
         }
 
-        return firstHalf == secondHalf ? true : false;
+        return firstHalf == secondHalf;
+
+    }
+
+    // 베스트 1위 자바 답변
+    static boolean solution1(int n) {
+        String s = n + ""; // int의 String 변환 꼼수
+
+        int sum = 0;
+
+        for (int i = 0; i < s.length(); i++) {
+            sum += (s.charAt(i) - s.charAt(s.length()-1-i)); //짝수 길이므로, 첫 인덱스와 마지막 인덱스의 숫자들을 서로 빼서 sum 이 0일 경우 참이고 아닐 경우 거짓 반환
+        }
+        return sum == 0;
+
+    }
+    // 다른 자바 답변
+    static boolean solution2(int n) {
+
+        String num = Integer.toString(n);
+
+        // Add first half, subtract second half;
+        int sum = 0;
+        int mid = num.length()/2;
+
+        for (int i = 0; i < mid; i++) {
+            sum += num.charAt(i);
+            sum -= num.charAt(i + mid);
+        }
+        // if zero, halves match
+        return sum == 0;
 
     }
     
     
     public static void main(String[] args) {
-        System.out.println(solution(1230));
-        System.out.println(solution(239017));
+        System.out.println(solution2(1230)); // true
+        System.out.println(solution2(239017)); // false
     }
 }

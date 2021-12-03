@@ -1,5 +1,6 @@
 package codesignal;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -67,9 +68,54 @@ public class Sort_by_Height {
         return answer;
 
     }
-    
-    
-    
+
+    // 베스트 자바 풀이
+    static int[] solution1(int[] a) {
+        ArrayList<Integer> list = new ArrayList<>();
+
+        for (int i: a) {
+            if (i != -1) {
+                list.add(i);
+            }
+        }
+
+        Collections.sort(list);
+
+        int index = 0;
+        for (int i = 0; i < a.length; i++) {
+            if (a[i] != -1) {
+                a[i] = list.get(index++); // -1이 아닌 위치에만 list에 정렬된 숫자들로 바꾸어 넣어준다.
+            }
+
+        }
+
+        return a;
+
+    }
+
+    // 두번째 베스트 자바 풀이
+    static int[] solution2(int[] a) {
+
+        int t;
+
+        for (int i = 0; i < a.length; i++) {
+            for (int j = i+1; j <a.length; j++) {
+                if (a[i] > a[j] && a[i] != -1 && a[j] != -1){
+
+                    t = a[i];
+                    a[i] = a[j];
+                    a[j] = t;
+
+                }
+            }
+        }
+
+        return a;
+    }
+
+
+
+
     public static void main(String[] args) {
         System.out.println(Arrays.toString(solution(new int[]{-1, 150, 190, 170, -1, -1, 160, 180})));
     }

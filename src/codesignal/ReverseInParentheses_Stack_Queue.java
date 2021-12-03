@@ -1,5 +1,9 @@
 package codesignal;
 
+import java.lang.Thread.State;
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Stack;
 
 /*
 Write a function that reverses characters in (possibly nested) parentheses in the input string.
@@ -37,46 +41,43 @@ Input/Output
 
 */
 
-// https://github.com/vinicius3333/CodeFights/blob/master/Intro/Smooth_Sailing/reverseParentheses.java
-public class ReverseInParentheses {
+// https://medium.com/@speedforcerun/leetcode-medium-190-reverse-substrings-between-each-pair-of-parentheses-bb26bb16d680
+public class ReverseInParentheses_Stack_Queue {
 
     static String solution(String s) {
 
-        for (int i = 0; i < s.length(); i++) {
-            if (s.toCharArray()[i] == ')'){
-                s = s.substring(0, i) + s.substring(i+1);
-                i--;
-                String reversed = "";
-                while (s.toCharArray()[i] != '(') {
-                    reversed += s.toCharArray()[i];
-                    s = s.substring(0, i) + s.substring(i + 1);
-                    i--;
+
+
+        Stack<Character> stack = new Stack<>();
+        for (char c : s.toCharArray()) {
+            
+            if (c == ')') {
+                Queue<Character> queue = new LinkedList<>();
+                
+                while (!stack.isEmpty() && stack.peek() != '(') {
+                    queue.add(stack.pop()); // '(' 만나기 전까지 문자들이 reverse되서 queue에 들어감.
                 }
 
-                s = s.substring(0, i) + reversed + s.substring(i + 1);
-                i += reversed.length() - 1;
+                if (!stack.isEmpty()) {
+                    stack.pop(); // '(' 를 빼낸다.
+                }
+
+                while (!queue.isEmpty()) {
+                    stack.push(queue.remove()); // queue에 reverse되서 들어간 문자들을 다시 stack에 집어 넣는다.
+                }
+
+
+            } else {
+                stack.push(c); // ')'를 만나기 전까지는 전부 스택에 집어넣는다.
             }
-
         }
+        StringBuilder sb = new StringBuilder();
+        while (!stack.isEmpty()) {
+            sb.append(stack.pop());
+        }
+        
 
-        return s;
-
-    }
-
-
-    // 베스트 자바 풀이
-    static String solution1(String s) {
-
-      StringBuilder sb = new StringBuilder(s);
-      int start, end;
-      while (s.indexOf("(") != -1) {
-          start = sb.lastIndexOf("("); // 뒤에서 찾은 "(" 의 인덱스
-          end = sb.indexOf(")", start); // start인덱스에서부터 찾은 ")"
-          sb.replace(start, end+1, new StringBuilder(sb.substring(start+1, end)).reverse().toString());
-          // start~end까지의 위치의 문자열을 start+1 에서 end-1까지의 문자열을 reverse한 문자열과 교체
-      }
-
-      return sb.toString();
+        return sb.reverse().toString();
 
     }
     
