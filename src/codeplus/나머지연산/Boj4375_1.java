@@ -1,4 +1,4 @@
-package codeplus;
+package codeplus.나머지연산;
 
 import java.util.Scanner;
 
