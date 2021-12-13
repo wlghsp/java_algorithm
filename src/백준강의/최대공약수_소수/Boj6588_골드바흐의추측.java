@@ -1,4 +1,4 @@
-package codeplus.최대공약수_소수;
+package 백준강의.최대공약수_소수;
 
 import java.io.BufferedReader;
 import java.io.IOException;

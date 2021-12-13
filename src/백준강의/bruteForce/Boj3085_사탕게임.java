@@ -1,4 +1,4 @@
-package codeplus.bruteForce;
+package 백준강의.bruteForce;
 
 
 /*
@@ -30,7 +30,6 @@ PPC
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Arrays;
 import java.util.StringTokenizer;
 
 public class Boj3085_사탕게임 {

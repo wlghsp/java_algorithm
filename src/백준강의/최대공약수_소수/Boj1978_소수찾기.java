@@ -1,12 +1,12 @@
-package codeplus.약수;
+package 백준강의.최대공약수_소수;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Arrays;
 import java.util.StringTokenizer;
 
-public class Boj1037_약수 {
+public class Boj1978_소수찾기 {
+
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
@@ -14,14 +14,32 @@ public class Boj1037_약수 {
 
         int[] arr = new int[n];
 
+        int cnt = 0;
+
         StringTokenizer st = new StringTokenizer(br.readLine());
+
         for (int i = 0; i < arr.length; i++) {
-            arr[i] = Integer.parseInt(st.nextToken());
+            if (isPrime(Integer.parseInt(st.nextToken()))) {
+                cnt++;
+            }
         }
 
-        Arrays.sort(arr);
-
-        System.out.println(arr[0] * arr[arr.length-1]);
+        System.out.println(cnt);
 
     }
+
+    static boolean isPrime(int x) {
+
+        if (x <2) return false;
+
+
+        for (int i = 2; i*i <= x; i++) {
+            if (x % i == 0) {
+                    return false;
+            }
+        }
+
+        return true;
+    }
+
 }

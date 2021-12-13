@@ -1,4 +1,4 @@
-package codeplus.bruteForce;
+package 백준강의.bruteForce;
 
 /*
 준규가 사는 나라는 우리가 사용하는 연도와 다른 방식을 이용한다.
@@ -29,41 +29,25 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Boj1476_날짜계산 {
+public class Boj1476_날짜계산2 {
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
 
-        int E = Integer.parseInt(st.nextToken());
-        int S = Integer.parseInt(st.nextToken());
-        int M = Integer.parseInt(st.nextToken());
+        int e = Integer.parseInt(st.nextToken()) - 1;
+        int s = Integer.parseInt(st.nextToken()) - 1;
+        int m = Integer.parseInt(st.nextToken()) - 1;
 
-        int e, s, m;
-        e = s = m = 1;
-
-        for (int i = 1; ; i++) {
-            if (e==E && s== S && m == M) {
-                System.out.println(i);
+        for (int i = 0; ; i++) {
+            if (i % 15 == e && i % 28 == s && i % 19 == m) {
+                System.out.println(i + 1);
                 break;
             }
-
-            e += 1;
-            s += 1;
-            m += 1;
-
-            if (e == 16) {
-                e = 1;
-            }
-
-            if (s == 29) {
-                s = 1;
-            }
-
-            if (m == 20) {
-                m = 1;
-            }
         }
+
+
+
 
 
     }

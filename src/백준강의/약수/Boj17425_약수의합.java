@@ -1,7 +1,6 @@
-package codeplus.약수;
+package 백준강의.약수;
 
 import java.io.*;
-import java.util.ArrayList;
 
 // https://bbangson.tistory.com/53
 public class Boj17425_약수의합 {

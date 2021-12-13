@@ -1,4 +1,4 @@
-package codeplus.약수;
+package 백준강의.약수;
 
 import java.io.BufferedReader;
 import java.io.IOException;
