@@ -40,8 +40,5 @@ public class Boj1157_단어공부 {
         bw.write(ch);
         bw.flush();
         bw.close();
-
-
-
     }
 }
