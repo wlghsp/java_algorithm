@@ -11,7 +11,7 @@ public class Boj5585_거스름돈 {
         int pay = Integer.parseInt(br.readLine());
 
         // 500, 100, 50, 10, 5, 1
-        int[] arr = new int[]{500, 100, 50, 10, 5, 1};
+        int[] arr = {500, 100, 50, 10, 5, 1};
 
         // 잔돈
         int change = TOTAL - pay;
