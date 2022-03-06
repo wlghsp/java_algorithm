@@ -1,4 +1,4 @@
-package baekjoon.bronze.bronzeⅡ;
+package baekjoon.bronze.bronzeⅡ.숫자의개수;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -12,23 +12,15 @@ public class Boj2577_숫자의개수 {
         int c = Integer.parseInt(br.readLine());
 
         String result = String.valueOf(a*b*c);
-        int count = 0;
-        int[] arr = new int[9];
 
-        for (int i = 0; i < result.length(); i++) {
-            if (result.charAt(i) == '0') {
-                count++;
-            } else {
-                arr[(result.charAt(i)- '0') -1]++;
-            }
-        }
+        int[] arr = new int[10];
+
+        for (int i = 0; i < result.length(); i++) arr[(result.charAt(i)- '0')]++;
 
         StringBuilder sb = new StringBuilder();
-        sb.append(count + "\n");
 
-        for (int i = 0; i < arr.length; i++) {
-            sb.append(arr[i]).append("\n");
-        }
+        for (int i = 0; i < arr.length; i++) {sb.append(arr[i]).append("\n");}
+
         System.out.println(sb);
 
     }
