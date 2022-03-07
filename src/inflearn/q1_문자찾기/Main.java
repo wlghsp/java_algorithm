@@ -1,13 +1,13 @@
-package inflearn;
+package inflearn.q1_문자찾기;
 
 
 import java.util.Scanner;
 
-public class Q1_문자찾기 {
+public class Main {
 
     public int solution(String str, char c) {
         int answer = 0;
-        // 전부 대문자 or 소문자로 변환
+        // Idea *** 전부 대문자 or 소문자로 변환 ****
 
         str = str.toUpperCase();
         c = Character.toUpperCase(c);
@@ -24,7 +24,7 @@ public class Q1_문자찾기 {
         Scanner kb =new Scanner(System.in);
         String str = kb.next();
         char c = kb.next().charAt(0);
-        Q1_문자찾기 T = new Q1_문자찾기();
+        Main T = new Main();
         System.out.println(T.solution(str, c));
         return ;
     }
