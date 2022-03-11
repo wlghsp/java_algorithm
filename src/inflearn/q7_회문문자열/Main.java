@@ -7,10 +7,10 @@ import java.util.Scanner;
 public class Main {
     public void solution(String str) {
 
-        str = str.toLowerCase(Locale.ROOT);
+        //str = str.toLowerCase(Locale.ROOT);
         String str1 = new StringBuilder(str).reverse().toString();
 
-        if (str.equals(str1)) {
+        if (str.equalsIgnoreCase(str1)) {
             System.out.println("YES");
         } else System.out.println("NO");
 

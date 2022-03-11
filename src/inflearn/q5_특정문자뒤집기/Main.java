@@ -26,6 +26,7 @@ public class Main {
         /*for (int i = 0; i < s.length; i++) {
             answer += s[i];
         }*/
+
         // String.valueOf로 char[]배열을 String 으로 변환할 수 있음
         answer = String.valueOf(s);
 
