@@ -1,4 +1,4 @@
-package inflearn.q13_암호;
+package inflearn.q13_큰수출력하기;
 import java.util.Scanner;
 
 public class Main {
