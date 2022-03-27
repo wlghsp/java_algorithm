@@ -6,7 +6,7 @@ public class Main2 {
     public void solution(String s) {
         String answer = "";
 
-        // 이 부분이 중요, 뒤에 " " 빈 문자열을 넣어줌
+        // 이 부분이 중요, 뒤에 " " 공백을 넣어줌
         s = s + " ";
 
         int cnt = 1;
