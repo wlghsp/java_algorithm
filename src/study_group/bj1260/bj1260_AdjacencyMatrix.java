@@ -1,4 +1,4 @@
-package study_group;
+package study_group.bj1260;
 
 import java.io.BufferedReader;
 import java.io.IOException;

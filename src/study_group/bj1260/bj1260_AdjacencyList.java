@@ -1,4 +1,4 @@
-package study_group;
+package study_group.bj1260;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -6,6 +6,7 @@ import java.io.InputStreamReader;
 import java.util.*;
 
 public class bj1260_AdjacencyList {
+    // 인접리스트 방식
     public static int n, m, v;
     public static ArrayList<ArrayList<Integer>> graph = new ArrayList<>();
     public static boolean[] visited;
