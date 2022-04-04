@@ -1,4 +1,4 @@
-package study_group.bj2667;
+package study_group.graph_search.finished.bj2667_단지번호붙이기;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class bj2667 {
+public class bj2667_단지번호붙이기 {
 
     static int N, group_cnt;
     static String[] map;
