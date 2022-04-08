@@ -19,4 +19,9 @@ class TimeTesatTest {
         TimeTesat timeTesat = new TimeTesat();
         assertEquals(timeTesat.now(), "1429");
     }
+
+    @Test
+    void bool() {
+
+    }
 }
