@@ -3,20 +3,18 @@ package leetcode;
 import java.util.ArrayList;
 import java.util.List;
 
-/*
-풀이방법
-문제 그대로 2중 반복문으로 파스칼 삼각형을 만든다.
-1. 현재 입력해야 하는 인덱스가 라인의 양 끝일 경우 1을 입력한다.
-2. 라인의 양 끝이 아닐 경우, 값을 구하기 위해 이전 라인에 있던 리스트 객체를 받아온다.
-3. 받아 온 리스트 객체(윗 줄)에서 이전의 인덱스(j-1)와 현재 인덱스 (j)를 합한다.
-4. 합한 정수를 현재 리스트(라인)에 추가한다.
-5. 이렇게 반복문을 통해 생성된 한 리스트(라인)를 최종 리스트(result) 객체에 추가한다.
-
- */
 
 public class Leetcode118_PascalsTriangle {
 
-    public List<List<Integer>> generate(int numRows) {
+    public List<List<Integer>> generate1(int numRows) {
+        /*
+            1. 이중포문을 돌리는데 바깥 포문은 numRows 만큼 돌리고 안쪽 포문은 바깥 포문의 인덱스+1 만큼 돌린다.
+            2. 바깥 포문에서 해당 행을 담을 list를 하나 생성한다.
+            2. 안쪽 포문 인덱스의 처음과 끝은 1로 list에 담아준다.
+            3. 그리고 나머지 안쪽 포문 인덱스에서는  그 전 행에서 현 행 인덱스 숫자의 앞 인덱스와 현 인덱스숫자와 같은 값을 더하고 둘을 더한 결과를 리스트에 담는다.
+            4. 안쪽 포문이 끝나고 만들어진 행 리스트를 결과리스트에 담아준다.
+         */
+
         List<List<Integer>> answer = new ArrayList<>();
         for (int i = 0; i < numRows; i++) {
             List<Integer> list = new ArrayList<>();
@@ -31,6 +29,25 @@ public class Leetcode118_PascalsTriangle {
             }
             answer.add(list);
         }
+        return answer;
+    }
+
+    public List<List<Integer>> generate(int numRows) {
+        List<List<Integer>> answer = new ArrayList<>();
+        for (int i = 0; i < numRows; i++) {
+            List<Integer> row = new ArrayList<>(1);
+            if (i != 0){
+                row.add(1);
+            }
+            for (int j = 0; j < i -1; j++) {
+                List<Integer> before = answer.get(i-1); // 전 행을 가져온다.
+                row.add(before.get(j) + before.get(j+1));
+            }
+
+            row.add(1); // 끝은 0을 넣어준다.
+            answer.add(row);
+        }
+
         return answer;
     }
 
