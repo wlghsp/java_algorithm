@@ -6,7 +6,7 @@ import java.util.List;
 
 public class Leetcode118_PascalsTriangle {
 
-    public List<List<Integer>> generate1(int numRows) {
+    public List<List<Integer>> generate2(int numRows) {
         /*
             1. 이중포문을 돌리는데 바깥 포문은 numRows 만큼 돌리고 안쪽 포문은 바깥 포문의 인덱스+1 만큼 돌린다.
             2. 바깥 포문에서 해당 행을 담을 list를 하나 생성한다.
@@ -32,7 +32,7 @@ public class Leetcode118_PascalsTriangle {
         return answer;
     }
 
-    public List<List<Integer>> generate(int numRows) {
+    public List<List<Integer>> generate1(int numRows) {
         List<List<Integer>> answer = new ArrayList<>();
         for (int i = 0; i < numRows; i++) {
             List<Integer> row = new ArrayList<>(1);
@@ -49,6 +49,32 @@ public class Leetcode118_PascalsTriangle {
         }
 
         return answer;
+    }
+
+    // https://www.programcreek.com/2014/03/leetcode-pascals-triangle-java/
+    public List<List<Integer>> generate(int numRows) {
+        List<List<Integer>> result = new ArrayList<>();
+        if (numRows <= 0) return result;
+
+        List<Integer> pre = new ArrayList<>();
+        pre.add(1);
+        result.add(pre);
+
+        for (int i = 2; i <= numRows; i++) {
+            List<Integer> cur = new ArrayList<>();
+            cur.add(1); // first
+
+            for (int j = 0; j < pre.size()-1; j++) {
+                cur.add(pre.get(j) + pre.get(j+1)); // middle
+            }
+
+            cur.add(1); // last
+        }
+
+
+
+
+        return result;
     }
 
     public static void main(String[] args) {
