@@ -8,6 +8,8 @@ public class 신고결과받기 {
     private int[] solution(String[] id_list, String[] report, int k) {
         int[] answer = new int[0];
 
+
+
         return answer;
     }
 
