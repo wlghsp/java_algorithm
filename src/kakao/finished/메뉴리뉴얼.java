@@ -1,4 +1,4 @@
-package kakao;
+package kakao.finished;
 
 import java.util.*;
 
@@ -70,6 +70,6 @@ public class 메뉴리뉴얼 {
         메뉴리뉴얼 T = new 메뉴리뉴얼();
         String[] orders = {"ABCFG", "AC", "CDE", "ACDE", "BCFG", "ACDEH"};
         int[] course = {2, 3, 4};
-        System.out.println(T.solution(orders, course));
+        System.out.println(Arrays.toString(T.solution(orders, course)));
     }
 }
