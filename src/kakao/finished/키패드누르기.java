@@ -4,7 +4,6 @@ package kakao.finished;
 // https://youtu.be/jFv2LRVCK6s
 public class 키패드누르기 {
     /*
-
      */
     Position left;
     Position right;
