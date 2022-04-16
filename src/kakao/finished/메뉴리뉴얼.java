@@ -31,18 +31,18 @@ public class 메뉴리뉴얼 {
             }
             // 3. 가장 많은 조합을 answer에 저장한다.
             if (!hashMap.isEmpty()) {
-                // 최댓값을 찾기 쉬우므로 리스트로 변형
-                List<Integer> countList = new ArrayList<>(hashMap.values());
-                int max = Collections.max(countList); // max 값 구하기
+            // 최댓값을 찾기 쉬우므로 리스트로 변형
+            List<Integer> countList = new ArrayList<>(hashMap.values());
+            int max = Collections.max(countList); // max 값 구하기
 
-                if (max > 1) { // 2개 이상일때만 조합이 유효하므로 1보다 클 때
-                    for(String key : hashMap.keySet()) {
-                        if (hashMap.get(key) == max) answerList.add(key);
-                    }
+            if (max > 1) { // 2개 이상일때만 조합이 유효하므로 1보다 클 때
+                for(String key : hashMap.keySet()) {
+                    if (hashMap.get(key) == max) answerList.add(key);
                 }
-                hashMap.clear();
             }
+            hashMap.clear();
         }
+    }
         Collections.sort(answerList);
 
 
