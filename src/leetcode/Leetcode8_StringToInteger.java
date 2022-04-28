@@ -3,12 +3,10 @@ package leetcode;
 public class Leetcode8_StringToInteger {
 
     public int myAtoi(String s) {
-        int answer = 0;
-
-        if (s == null || s.length() < 1) return 0;
 
         // trim white spaces
         s = s.trim();
+        if (s == null || s.length() < 1) return 0;
 
         char flag = '+';
 
