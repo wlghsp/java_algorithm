@@ -1,4 +1,4 @@
-package cs_senpai;
+package cs_senpai.boj11866;
 
 import java.io.BufferedReader;
 import java.io.IOException;
