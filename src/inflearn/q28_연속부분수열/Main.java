@@ -5,10 +5,20 @@ import java.util.Scanner;
 public class Main {
 
     // 슬라이딩 윈도우 기법
-    private int solution(int n, int k, int[] a) {
+    private int solution(int n, int k, int[] arr) {
         int answer = 0;
 
-
+        for (int i = 0; i < n; i++) {
+            int sum = 0;
+            for (int j = i; j < n; j++) {
+                sum += arr[j];
+                if (sum > k) break;
+                else if (sum == k) {
+                    answer++;
+                    break;
+                }
+            }
+        }
 
         return answer;
     }
@@ -17,12 +27,12 @@ public class Main {
         Main T = new Main();
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-        int k = sc.nextInt();
+        int m = sc.nextInt();
         int[] arr = new int[n];
         for (int i = 0; i < n; i++) {
             arr[i] = sc.nextInt();
         }
 
-        System.out.println(T.solution(n,k,arr));
+        System.out.println(T.solution(n,m,arr));
     }
 }
