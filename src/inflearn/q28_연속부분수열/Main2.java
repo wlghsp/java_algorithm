@@ -4,10 +4,20 @@ import java.util.Scanner;
 
 public class Main2 {
 
-    private int solution(int n, int k, int[] arr) {
-        int answer = 0;
-        int lt = 0, rt = 0;
+    private int solution(int n, int m, int[] arr) {
+        int answer = 0, lt = 0 ,sum = 0;
 
+        for (int rt = 0; rt < n; rt++) {
+            sum += arr[rt];
+
+            if (sum == m) answer++;
+
+            while (sum >= m) {
+                sum -= arr[lt++];
+
+                if (sum==m) answer++;
+            }
+        }
 
         return answer;
     }
