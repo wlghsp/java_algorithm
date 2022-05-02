@@ -2,29 +2,18 @@ package inflearn.q28_연속부분수열;
 
 import java.util.Scanner;
 
-public class Main {
-
+public class Main2 {
 
     private int solution(int n, int k, int[] arr) {
         int answer = 0;
+        int lt = 0, rt = 0;
 
-        for (int i = 0; i < n; i++) {
-            int sum = 0;
-            for (int j = i; j < n; j++) {
-                sum += arr[j];
-                if (sum > k) break;
-                else if (sum == k) {
-                    answer++;
-                    break;
-                }
-            }
-        }
 
         return answer;
     }
 
     public static void main(String[] args) {
-        Main T = new Main();
+        Main2 T = new Main2();
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         int m = sc.nextInt();
