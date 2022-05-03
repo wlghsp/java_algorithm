@@ -1,4 +1,4 @@
-package programmers.level1;
+package programmers.level1.소수찾기;
 
 
 /*
@@ -32,11 +32,12 @@ public class 소수찾기 {
     static int solution(int n) {
         int answer = 0;
 
-        for (int i = 2; i <= n; i++) {
-           if (isPrime(i)) {
-               answer++;
-           } 
-        }
+        // 1. 숫자조합: 생성가능한 모든 숫자조합을 재귀함수를 통해 하나씩 만든다.
+        // 2. Set : set의 개념을 활용하여 중복되는 조합을 제거한다.
+        // 3. 소수인지 판단 지금 만들어진 숫자가 소수인지 판단. (에라토스테네스의 채)
+
+
+
         return answer;
     }
 
