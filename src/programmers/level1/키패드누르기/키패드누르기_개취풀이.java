@@ -1,8 +1,8 @@
-package kakao.finished;
+package programmers.level1.키패드누르기;
 
 // https://programmers.co.kr/learn/courses/30/lessons/67256
 // https://youtu.be/jFv2LRVCK6s
-public class 키패드누르기 {
+public class 키패드누르기_개취풀이 {
     /*
      */
     Position left;
@@ -17,7 +17,7 @@ public class 키패드누르기 {
 
         for (int num : numbers) {
             // 2. 숫자를 누를 손가락 정하기
-            numPos = new Position(num-1/3, (num-1) % 3);
+            numPos = new Position((num-1)/3, (num-1) % 3);
             if (num == 0) numPos = new Position(3, 1);
 
             String finger = numPos.getFinger(hand);
@@ -41,7 +41,7 @@ public class 키패드누르기 {
         }
 
         public String getFinger(String hand) {
-            String finger = hand.equals("right") ? "R" : ":L";// 본인의 주손을 넣어두기
+            String finger = hand.equals("right") ? "R" : "L";// 본인의 주손을 넣어두기
 
             if (this.col == 0) finger = "L"; // 왼쪽 다이얼이면 왼손
             else if(this.col == 2) finger = "R"; // 오른쪽 다이얼이면 오른손
@@ -66,9 +66,9 @@ public class 키패드누르기 {
     }
 
     public static void main(String[] args) {
-        키패드누르기 T = new 키패드누르기();
+        키패드누르기_개취풀이 T = new 키패드누르기_개취풀이();
         int[] numbers = {1, 3, 4, 5, 8, 2, 1, 4, 5, 9, 5};
         String hand = "right";
-        System.out.println(T.solution(numbers, hand)); // LRLLLRLLLRL
+        System.out.println(T.solution(numbers, hand)); // LRLLLRLLRRL
     }
 }
