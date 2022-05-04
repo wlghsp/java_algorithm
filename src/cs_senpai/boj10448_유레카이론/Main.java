@@ -1,4 +1,4 @@
-package cs_senpai.boj10448;
+package cs_senpai.boj10448_유레카이론;
 
 import java.io.BufferedReader;
 import java.io.IOException;

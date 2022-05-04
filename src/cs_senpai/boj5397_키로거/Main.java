@@ -1,4 +1,4 @@
-package cs_senpai.boj5397;
+package cs_senpai.boj5397_키로거;
 
 import java.io.BufferedReader;
 import java.io.IOException;

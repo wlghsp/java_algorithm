@@ -1,4 +1,4 @@
-package cs_senpai.boj9012;
+package cs_senpai.boj9012_괄호;
 
 import java.io.BufferedReader;
 import java.io.IOException;

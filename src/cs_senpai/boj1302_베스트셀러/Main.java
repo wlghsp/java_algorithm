@@ -1,4 +1,4 @@
-package cs_senpai.boj1302;
+package cs_senpai.boj1302_베스트셀러;
 
 import java.io.BufferedReader;
 import java.io.IOException;

@@ -1,4 +1,4 @@
-package cs_senpai.boj11866;
+package cs_senpai.boj11866_요세푸스문제0;
 
 import java.io.BufferedReader;
 import java.io.IOException;
