@@ -1,4 +1,4 @@
-package kakao;
+package programmers.kakao;
 
 //https://youtu.be/S2JDw9oNNDk
 //https://programmers.co.kr/learn/courses/30/lessons/43165

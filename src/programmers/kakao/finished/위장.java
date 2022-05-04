@@ -1,4 +1,4 @@
-package kakao.finished;
+package programmers.kakao.finished;
 
 import java.util.HashMap;
 import java.util.Iterator;

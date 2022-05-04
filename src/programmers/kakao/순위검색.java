@@ -1,4 +1,4 @@
-package kakao;
+package programmers.kakao;
 
 // https://www.youtube.com/watch?v=vFwVvJQnC4M
 
