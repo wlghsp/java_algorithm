@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode.finished;
 
 public class LeetCode191_Number_Of1Bits {
 

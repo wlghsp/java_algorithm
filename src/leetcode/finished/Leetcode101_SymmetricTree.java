@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode.finished;
 
 import java.util.LinkedList;
 import java.util.Queue;

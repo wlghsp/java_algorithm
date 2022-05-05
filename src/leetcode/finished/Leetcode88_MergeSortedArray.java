@@ -1,6 +1,4 @@
-package leetcode;
-
-import java.util.Arrays;
+package leetcode.finished;
 
 public class Leetcode88_MergeSortedArray {
 

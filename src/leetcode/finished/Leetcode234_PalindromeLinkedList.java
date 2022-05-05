@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode.finished;
 
 public class Leetcode234_PalindromeLinkedList {
 

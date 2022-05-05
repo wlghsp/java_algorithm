@@ -1,6 +1,4 @@
-package leetcode;
-
-import java.util.Locale;
+package leetcode.finished;
 
 public class Leetcode125_ValidPalindrome {
 

@@ -1,6 +1,8 @@
-package leetcode;
+package leetcode.finished;
 
-public class Leetcode5_LongestPalindromicSubstring {
+
+// https://youtu.be/uT34fIpk7mk
+public class Leetcode5_LongestPalindromicSubstring_2 {
 
     private int lo, maxLen;
 
@@ -31,7 +33,7 @@ public class Leetcode5_LongestPalindromicSubstring {
 
 
     public static void main(String[] args) {
-        Leetcode5_LongestPalindromicSubstring T = new Leetcode5_LongestPalindromicSubstring();
+        Leetcode5_LongestPalindromicSubstring_2 T = new Leetcode5_LongestPalindromicSubstring_2();
         String s1 = "babad";
         String s2 = "cbbd";
         System.out.println(T.longestPalindrome(s1));
