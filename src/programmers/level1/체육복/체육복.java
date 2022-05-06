@@ -1,4 +1,4 @@
-package programmers.level1;
+package programmers.level1.체육복;
 
 import java.util.Arrays;
 
