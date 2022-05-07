@@ -1,9 +1,8 @@
-package baekjoon.bronze.bronzeⅠ;
+package baekjoon.bronze.bronzeⅠ.Boj2750_수_정렬하기;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Arrays;
 
 /*
 문제
@@ -30,7 +29,7 @@ N개의 수가 주어졌을 때, 이를 오름차순으로 정렬하는 프로�
 
 */
 
-public class Boj2750_수_정렬하기 {
+public class Boj2750_수_정렬하기_선택정렬 {
     
     public static void main(String[] args) throws IOException{
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -42,18 +41,18 @@ public class Boj2750_수_정렬하기 {
             arr[i] = Integer.parseInt(br.readLine());
         }
 
-        // Arrays.sort(arr);
+        // 선택정렬
+        for (int i = 0; i < arr.length-1; i++) {
+            for (int j = i+1; j < arr.length; j++) {
 
-        // Bubble sort
-		// for(int i = 0; i < N - 1; i++) {
-		// 	for(int j = i + 1; j < N; j++) {
-		// 		if(arr[i] > arr[j]) {
-		// 			int temp = arr[j];
-		// 			arr[j] = arr[i];
-		// 			arr[i] = temp;
-		// 		}
-		// 	}
-		// }    
+                if (arr[i] > arr[j]) {
+                    // 값 교환
+                    int temp = arr[j];
+                    arr[j] = arr[i];
+                    arr[i] = temp;
+                }
+            }
+        }
 
         
 
