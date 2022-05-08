@@ -1,4 +1,4 @@
-package baekjoon.silverⅤ;
+package baekjoon.silverⅤ.Boj1018_체스판다시칠하기;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
