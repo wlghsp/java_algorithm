@@ -1,4 +1,4 @@
-package programmers.level1;
+package programmers.level2.프린터;
 
 public class 프린터 {
 

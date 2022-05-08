@@ -1,4 +1,4 @@
-package programmers.kakao;
+package programmers.level2.순위검색;
 
 // https://www.youtube.com/watch?v=vFwVvJQnC4M
 

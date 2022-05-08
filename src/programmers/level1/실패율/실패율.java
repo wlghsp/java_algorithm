@@ -1,4 +1,4 @@
-package programmers.level1;
+package programmers.level1.실패율;
 
 /*
 슈퍼 게임 개발자 오렐리는 큰 고민에 빠졌다. 그녀가 만든 프랜즈 오천성이 대성공을 거뒀지만, 요즘 신규 사용자의 수가 급감한 것이다. 
@@ -58,14 +58,56 @@ N 	stages 	result
 */
 
 
+import java.util.Arrays;
+
 public class 실패율 {
     
-    public int[] solution(int N, int[] stages) {
+    public static int[] solution(int N, int[] stages) {
         int[] answer = {};
+        int[] a = new int[N+2];
+        int[] b = new int[N+2];
+
+        for (int stage : stages) {
+            a[stage]++;
+            b[stage]++;
+        }
+        for (int i = N; i > -1; i--) {
+            b[i] += b[i+1];
+        }
+
+        int[][] arr = new int[N+2][N+2];
+        int index = 0;
+        for (int i = 1; i < N+1; i++) {
+            if (b[i] != 0) {
+                arr[index][0] = a[i]/ b[i];
+                arr[index][1] = i;
+            } else {
+                arr[index][0] = 0;
+                arr[index][1] = i;
+            }
+        }
+
+        Arrays.sort(arr, (o1, o2) -> {
+           if(o1[0] == o2[0])
+                return o1[1] - o2[1];
+           return o2[0] - o1[0];
+        });
+
+
+        for (int i = 0; i < arr.length; i++) {
+
+
+        }
+
+
+
+
         return answer;
     }
     
     public static void main(String[] args) {
-        
+        int N = 5;
+        int[] stages = {2,1,2,6,2,4,3,3};
+        System.out.println(Arrays.toString(solution(N, stages)));
     }
 }

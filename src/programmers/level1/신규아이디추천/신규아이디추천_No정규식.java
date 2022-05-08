@@ -1,4 +1,4 @@
-package programmers.kakao.finished.신규아이디추천;
+package programmers.level1.신규아이디추천;
 
 // https://www.youtube.com/watch?v=KGmuGWMzXx8
 public class 신규아이디추천_No정규식 {

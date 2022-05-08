@@ -1,4 +1,4 @@
-package programmers.kakao;
+package programmers.level2.타겟넘버;
 
 //https://youtu.be/S2JDw9oNNDk
 //https://programmers.co.kr/learn/courses/30/lessons/43165
