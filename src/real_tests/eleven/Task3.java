@@ -1,7 +1,4 @@
-package eleven;
-
-import java.util.ArrayList;
-import java.util.Arrays;
+package real_tests.eleven;
 
 /*
 오름차순 으로 일러어진 배열 

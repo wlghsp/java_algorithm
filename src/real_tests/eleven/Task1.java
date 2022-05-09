@@ -1,4 +1,4 @@
-package eleven;
+package real_tests.eleven;
 
 import java.util.Collections;
 import java.util.PriorityQueue;
