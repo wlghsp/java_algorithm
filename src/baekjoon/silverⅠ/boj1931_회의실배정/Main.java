@@ -1,4 +1,4 @@
-package cs_senpai.boj1931_회의실배정;
+package baekjoon.silverⅠ.boj1931_회의실배정;
 
 import java.io.BufferedReader;
 import java.io.IOException;

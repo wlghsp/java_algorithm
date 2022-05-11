@@ -1,4 +1,4 @@
-package cs_senpai.boj1935_후위표기식2;
+package baekjoon.silverⅢ.boj1935_후위표기식2;
 
 import java.io.BufferedReader;
 import java.io.IOException;

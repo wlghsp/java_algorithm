@@ -1,4 +1,4 @@
-package cs_senpai.boj7785_회사에있는사람;
+package baekjoon.silverⅤ.boj7785_회사에있는사람;
 
 import java.io.BufferedReader;
 import java.io.IOException;

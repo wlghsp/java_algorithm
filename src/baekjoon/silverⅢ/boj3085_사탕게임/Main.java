@@ -1,4 +1,4 @@
-package cs_senpai.boj3085_사탕게임;
+package baekjoon.silverⅢ.boj3085_사탕게임;
 
 import java.io.BufferedReader;
 import java.io.IOException;

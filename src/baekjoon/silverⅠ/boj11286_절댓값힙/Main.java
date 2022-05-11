@@ -1,4 +1,4 @@
-package cs_senpai.boj11286_절댓값힙;
+package baekjoon.silverⅠ.boj11286_절댓값힙;
 
 import java.io.BufferedReader;
 import java.io.IOException;

@@ -1,4 +1,4 @@
-package cs_senpai.boj2075_N번째큰수;
+package baekjoon.silverⅠ.boj2075_N번째큰수;
 
 import java.io.BufferedReader;
 import java.io.IOException;

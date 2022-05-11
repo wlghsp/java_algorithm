@@ -1,25 +1,25 @@
-package cs_senpai.boj2164_카드2;
+package baekjoon.silverⅣ.boj2164_카드2;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.ArrayDeque;
-import java.util.Deque;
+import java.util.LinkedList;
+import java.util.Queue;
 
-public class Main {
+public class Main2 {
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int N = Integer.parseInt(br.readLine());
-        Deque<Integer> dq = new ArrayDeque<>();
+        Queue<Integer> q = new LinkedList<>();
 
         for (int i = 1; i < N+1; i++) {
-            dq.add(i);
+            q.add(i);
         }
-        while (dq.size() > 1) {
-            dq.pop();
-            dq.add(dq.pop());
+        while (q.size() > 1) {
+            q.poll();
+            q.add(q.poll());
         }
-        System.out.println(dq.pop());
+        System.out.println(q.poll());
     }
 }

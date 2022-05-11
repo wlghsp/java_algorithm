@@ -1,4 +1,4 @@
-package cs_senpai.boj2164_카드2;
+package baekjoon.silverⅣ.boj2164_카드2;
 
 import java.io.BufferedReader;
 import java.io.IOException;
