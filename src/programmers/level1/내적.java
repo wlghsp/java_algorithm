@@ -25,9 +25,11 @@ a 	            b 	      result
 
 */
 
+import java.util.stream.IntStream;
+
 public class 내적 {
     
-    static int solution(int[] a, int[] b) {
+    static int solution1(int[] a, int[] b) {
         int i=0, j=0, sum =0;
 
         while (i < a.length && j < b.length)
@@ -35,11 +37,17 @@ public class 내적 {
 
         return sum;
     }
+    static int solution(int[] a, int[] b) {
+        return IntStream.range(0, a.length).map(index -> a[index] * b[index]).sum();
+    }
     
     public static void main(String[] args) {
         int[] a= {-1,0,1};
         int[] b= {1,0,-1};
-        System.out.println(solution(a, b));
+        int[] a1= {1,2,3,4};
+        int[] b1= {-3,-1,0,2};
+        System.out.println(solution(a, b)); // -2
+        System.out.println(solution(a1, b1)); // 3
 
     }
 }
