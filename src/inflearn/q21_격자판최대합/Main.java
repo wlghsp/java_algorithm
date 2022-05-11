@@ -6,26 +6,26 @@ public class Main {
 
     private int solution(int n, int[][] m) {
         int answer = Integer.MIN_VALUE;
-        int sum1, sum2;
+        int sumOfRow, sumOfCol;
         // 각 행의 합, 각 열의 합마다 최대값 비교
         for (int i = 0; i < n; i++) {
-            sum1 = sum2 = 0;
+            sumOfRow = sumOfCol = 0;
             for (int j = 0; j < n; j++) {
-                sum1 += m[i][j];
-                sum2 += m[j][i];
+                sumOfRow += m[i][j]; // 행의 합
+                sumOfCol += m[j][i]; // 열의 합
             }
-            answer = Math.max(answer, sum1);
-            answer = Math.max(answer, sum2);
+            answer = Math.max(answer, sumOfRow);
+            answer = Math.max(answer, sumOfCol);
         }
-        sum1 = sum2 = 0;
+        sumOfRow = sumOfCol = 0;
 
         // 대각선의 합 구하고 비교하기
         for (int i = 0; i < n; i++) {
-            sum1 += m[i][i];
-            sum2 += m[i][n - i - 1];
+            sumOfRow += m[i][i]; //왼쪽 위에서 오른쪽 아래 대각선
+            sumOfCol += m[i][n - i - 1]; // 오른쪽 위에서 왼쪽 아래 방향 대각선
         }
-        answer = Math.max(answer, sum1);
-        answer = Math.max(answer, sum2);
+        answer = Math.max(answer, sumOfRow);
+        answer = Math.max(answer, sumOfCol);
 
         return answer;
     }
