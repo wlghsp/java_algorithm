@@ -35,13 +35,13 @@ public class Boj9012_괄호 {
          *  스택이 비어 있으면 온전한 수식이므로 "YES"이다.
          */
 
-        if (stack.empty()) {
-            return "YES";
-        } else {
-            return "NO";
-        }
+//        if (stack.empty()) {
+//            return "YES";
+//        } else {
+//            return "NO";
+//        }
 
-
+        return stack.empty() ? "YES" : "NO";
 
     }
 
