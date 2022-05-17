@@ -11,7 +11,7 @@ import java.io.InputStreamReader;
  * S를 넘으면 거기서 중단하고 count에서 -1을 뺀 값이 N의 최댓값이다.
  */
 
-public class Boj1789 {
+public class Boj1789_수들의합 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int s = Integer.parseInt(br.readLine());
