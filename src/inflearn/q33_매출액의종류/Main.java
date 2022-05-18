@@ -13,7 +13,7 @@ public class Main {
     private ArrayList<Integer> solution(int n, int k, int[] arr) {
         ArrayList<Integer> answer = new ArrayList<>();
         HashMap<Integer, Integer> hm = new HashMap<>();
-        // K만큼 미리 세팅
+        // K -1 만큼 미리 세팅
         for (int i = 0; i < k - 1; i++) {
             hm.put(arr[i], hm.getOrDefault(arr[i], 0) +1);
         }
