@@ -1,4 +1,4 @@
-package Doit_알고리즘코딩테스트.Boj11724_연결요소의개수구하기;
+package doitcodingtestjava.Boj11724_연결요소의개수구하기;
 
 import java.io.BufferedReader;
 import java.io.IOException;
