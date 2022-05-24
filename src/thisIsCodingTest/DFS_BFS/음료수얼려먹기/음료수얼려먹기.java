@@ -1,4 +1,4 @@
-package thisIsCodingTest.음료수얼려먹기;
+package thisIsCodingTest.DFS_BFS.음료수얼려먹기;
 
 import java.io.BufferedReader;
 import java.io.IOException;

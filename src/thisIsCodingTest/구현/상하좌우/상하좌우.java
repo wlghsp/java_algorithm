@@ -1,4 +1,4 @@
-package thisIsCodingTest.상하좌우;
+package thisIsCodingTest.구현.상하좌우;
 
 import java.io.BufferedReader;
 import java.io.IOException;
