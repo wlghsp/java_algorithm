@@ -10,17 +10,10 @@ public class Main {
 
         for (int i = 0; i < s.length(); i++) {
             char c = s.charAt(i);
-
-            if (c == '('){
-                stk.add(c);
-            }
-
-            else if (stk.empty())  {
-                return "NO";
-            }
-
-            else {
-                stk.pop();
+            if (c == '(') stk.push(c);
+            else { // 닫는 괄호일 때
+                if (stk.isEmpty())  return "NO"; // 비어 있다면 올바른 괄호가 아님
+                stk.pop(); // 안 비어 있으면 스택에서 닫는 괄호 빼냄
             }
         }
 
