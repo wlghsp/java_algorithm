@@ -6,30 +6,23 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Stack;
 
-public class Main {
+public class Main_강사님풀이 {
 
     public String solution(String s) {
         String answer = "";
         Stack<Character> stk = new Stack<>();
         for (char c : s.toCharArray()) {
-            if (c == '(' || Character.isAlphabetic(c)) {
-                stk.push(c);
-            } else if (c== ')') {
-                while (true) {
-                    char k = stk.pop();
-                    if (k == '(') break;
-                }
-            }
+            if (c == ')') {
+                while (stk.pop() != '('); // while문에 괄호 없이도 쓸 수 있음
+            } else stk.push(c);
         }
 
-        for (Character character : stk) {
-            answer += character;
-        }
+        for (Character character : stk) answer += character;
         return answer;
     }
 
     public static void main(String[] args) throws IOException {
-        Main T = new Main();
+        Main_강사님풀이 T = new Main_강사님풀이();
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         String s = br.readLine();
 
