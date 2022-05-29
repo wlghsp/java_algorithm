@@ -21,7 +21,7 @@ public class Main {
         for (int i = 0; i < 4; i++) {
             // 연산자 개수가 1개 이상인 경우
             if (operators[i] > 0) {
-                operators[i]--;
+                operators[i]--;  // 연산자를 사용할 것이기에 1을 빼준다.
 
                 switch (i) {
                     case 0:
@@ -38,7 +38,7 @@ public class Main {
                         break;
                 }
 
-                // 재귀호출이 종료되면 다시 해당 연산자 개수를 복구한다.
+                // 사용한 연산자를 다음 dfs에서 사용할 수 있도록 다시 되돌려준다.
                 operators[i]++;
             }
         }
