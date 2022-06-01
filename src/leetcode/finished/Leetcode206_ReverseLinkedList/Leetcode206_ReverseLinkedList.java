@@ -1,4 +1,4 @@
-package leetcode.finished;
+package leetcode.finished.Leetcode206_ReverseLinkedList;
 
 
 

@@ -1,4 +1,4 @@
-package leetcode.finished;
+package leetcode.finished.Leetcode101_SymmetricTree;
 
 public class TreeNode {
       int val;

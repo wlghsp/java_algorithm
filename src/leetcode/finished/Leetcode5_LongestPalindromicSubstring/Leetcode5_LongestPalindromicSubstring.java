@@ -1,4 +1,4 @@
-package leetcode.finished;
+package leetcode.finished.Leetcode5_LongestPalindromicSubstring;
 
 public class Leetcode5_LongestPalindromicSubstring {
 

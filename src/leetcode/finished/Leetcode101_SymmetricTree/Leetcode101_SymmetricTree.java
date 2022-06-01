@@ -1,4 +1,4 @@
-package leetcode.finished;
+package leetcode.finished.Leetcode101_SymmetricTree;
 
 import java.util.LinkedList;
 import java.util.Queue;

@@ -1,4 +1,4 @@
-package leetcode.finished;
+package leetcode.finished.Leetcode5_LongestPalindromicSubstring;
 
 
 // https://youtu.be/uT34fIpk7mk
