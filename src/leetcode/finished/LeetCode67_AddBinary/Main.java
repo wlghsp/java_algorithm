@@ -1,4 +1,4 @@
-package leetcode.LeetCode67_AddBinary;
+package leetcode.finished.LeetCode67_AddBinary;
 
 import java.math.BigInteger;
 

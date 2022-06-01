@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode.finished;
 
 public class LeetCode696_Count_Binary_Substrings {
 
