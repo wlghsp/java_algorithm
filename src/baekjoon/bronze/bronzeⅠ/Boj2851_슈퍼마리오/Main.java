@@ -13,11 +13,13 @@ public class Main {
             arr[i] = Integer.parseInt(br.readLine());
         }
 
-        int sum = 0, lt = 0;
+        int sum = 0;
         int answer = 0;
         for (int rt = 0; rt < arr.length; rt++) {
             sum += arr[rt];
-            if (answer >= distance(sum)) Math.max(answer, sum);
+            if (distance(answer) >= distance(sum)) {
+                answer = Math.max(answer, sum);
+            }
         }
 
         System.out.println(answer);
