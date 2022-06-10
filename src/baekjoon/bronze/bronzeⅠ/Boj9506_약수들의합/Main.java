@@ -17,14 +17,28 @@ public class Main {
             if (N == -1) break;
             for (int i = 1; i < N/2 + 1; i++) {
                 if (N % i == 0){
-
+                    nums.add(i);
                 }
+            }
+
+            if (N == getSum(nums)) {
+                System.out.print(N + " = ");
+                for (int i = 0; i < nums.size() - 1; i++) {
+                    System.out.print(nums.get(i) + " + ");
+                }
+                System.out.println(nums.get(nums.size()- 1));
+            } else {
+                System.out.printf("%d is NOT perfect.\n", N);
             }
         }
 
     }
 
-//    public int getSum(List<Integer> nums) {
-//        int answer = 0;
-//    }
+    public static int getSum(List<Integer> nums) {
+        int answer = 0;
+        for (Integer num : nums) {
+            answer += num;
+        }
+        return answer;
+    }
 }
