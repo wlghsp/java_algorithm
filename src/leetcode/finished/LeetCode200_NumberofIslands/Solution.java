@@ -1,4 +1,4 @@
-package leetcode.LeetCode200_NumberofIslands;
+package leetcode.finished.LeetCode200_NumberofIslands;
 
 public class Solution {
     public int numIslands(char[][] grid) {
