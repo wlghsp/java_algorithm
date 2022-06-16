@@ -44,7 +44,6 @@ public class Main {
             for (int j = 0; j < N; j++) {
                 row.add(scores[j][i]);
             }
-            cols.add(row);
         }
 
 
