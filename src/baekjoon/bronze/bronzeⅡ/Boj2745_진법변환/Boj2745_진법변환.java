@@ -1,4 +1,4 @@
-package baekjoon.bronze.bronzeⅡ;
+package baekjoon.bronze.bronzeⅡ.Boj2745_진법변환;
 
 import java.io.BufferedReader;
 import java.io.IOException;
