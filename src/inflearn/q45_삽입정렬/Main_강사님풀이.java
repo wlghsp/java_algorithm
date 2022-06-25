@@ -2,7 +2,7 @@ package inflearn.q45_삽입정렬;
 
 import java.util.Scanner;
 
-public class Main {
+public class Main_강사님풀이 {
 
     /*
      삽입정렬은 현재 비교하고자 하는 target(타겟)과 그 이전의 원소들과 비교하며 자리를 교환(swap)하는 정렬방법
@@ -19,14 +19,13 @@ public class Main {
         for (int i = 1; i < arr.length; i++) {
 
             // 타겟 넘버
-            int target = arr[i];
+            int target = arr[i], j;
 
-            int j = i - 1;
 
             // 타겟이 이전 원소보다 크기 전 까지 반복
-            while (j >= 0 && target < arr[j]) {
-                arr[j+1] = arr[j];   // 이전 원소를 한 칸씩 뒤로 미룬다.
-                j--;
+            for (j = i-1; j >= 0; j--) {
+                if (arr[j] > target) arr[j + 1] = arr[j];
+                else break;
             }
 
             // 멈춘 지점 뒤에 삽입
@@ -38,7 +37,7 @@ public class Main {
 
 
     public static void main(String[] args) {
-        Main T = new Main();
+        Main_강사님풀이 T = new Main_강사님풀이();
         Scanner sc = new Scanner(System.in);
         int N = sc.nextInt();
 
