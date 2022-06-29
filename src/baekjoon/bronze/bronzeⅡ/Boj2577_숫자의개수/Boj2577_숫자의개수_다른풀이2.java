@@ -1,11 +1,7 @@
-package baekjoon.bronze.bronzeⅡ.숫자의개수;
+package baekjoon.bronze.bronzeⅡ.Boj2577_숫자의개수;
 
 import java.io.IOException;
-import java.util.Arrays;
-import java.util.Map;
 import java.util.Scanner;
-import java.util.stream.Collectors;
-import java.util.stream.IntStream;
 
 
 public class Boj2577_숫자의개수_다른풀이2 {

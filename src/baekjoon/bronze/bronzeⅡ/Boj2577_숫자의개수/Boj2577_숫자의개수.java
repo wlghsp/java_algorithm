@@ -1,4 +1,4 @@
-package baekjoon.bronze.bronzeⅡ.숫자의개수;
+package baekjoon.bronze.bronzeⅡ.Boj2577_숫자의개수;
 
 import java.io.BufferedReader;
 import java.io.IOException;
