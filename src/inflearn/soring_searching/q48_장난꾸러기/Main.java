@@ -1,5 +1,6 @@
 package inflearn.soring_searching.q48_장난꾸러기;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
 /*
@@ -9,14 +10,13 @@ import java.util.Scanner;
  24 27
 */
 public class Main {
-    public int[] solution(int n, int[] a) {
-        int[] answer = new int[2];
+    public ArrayList<Integer> solution(int n, int[] a) {
+        ArrayList<Integer> answer = new ArrayList<>();
         int[] b = a.clone(); // 깊은 복사
         Arrays.sort(b);
         for (int i = 0; i < n; i++) {
             if (a[i] != b[i]) {
-               if (answer[0] == 0) answer[0] = i+1;
-               else answer[1] = i + 1;
+                answer.add(i + 1);
             }
         }
         return answer;
