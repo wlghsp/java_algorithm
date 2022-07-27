@@ -1,7 +1,6 @@
 package coding_monster.문제2H픽셀수세기;
 
-import java.lang.*;
-import java.util.*;
+import java.util.Scanner;
 
 
 public class Main {
@@ -24,12 +23,15 @@ public class Main {
     public static void testCase(int caseIndex) {
         long R = scanner.nextLong();
         long count = 0;
+        long y = R;
+
         for (int x = 0; x <= R; x++) {
-            for (int y = 0; y <= R; y++) {
-                // <x,y> := (0,0) ~ (R,R)까지의 모든 좌표가 차례로 한 번씩
-                if (isInside(x, y, R)) {
-                    // <x,y>가 왼쪽 아래 점인 픽셀들 중 원 내부에 있는 모든 픽셀
-                    count++;
+            for (; y >= 0; y-=1) {
+                if(isInside(x, y, R)) {
+                    // y:= X좌표에서 위에서부터 내려오다가 최초로 원에 포함되는 픽셀의 y좌표
+                    long h = y + 1;
+                    count += h;
+                    break;
                 }
             }
         }
