@@ -20,7 +20,7 @@ import java.util.StringTokenizer;
 
 // 브루트 포스, 전체 경우의 수를 다 적용하여 적합한 값을 찾아냄 
 
-public class Boj2789_블랙잭 {
+public class Boj2798_블랙잭 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine(), " ");
