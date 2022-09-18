@@ -4,18 +4,20 @@ import java.util.Scanner;
 
 public class Main {
 
-    static int n, cnt;
-    static int[] dx = {-1, 0, 1, 0};
-    static int[] dy = {0, 1, 0, -1};
+    static int answer = 0, n;
+
+    // 8방향 12시, 1시, 3시, 5시, 6시, 7시, 9시, 11시
+    static int[] dx = {-1, -1, 0, 1, 1, 1, 0, -1};
+    static int[] dy = {0, 1, 1, 1, 0, -1, -1, -1};
     static int[][] board;
 
-    public void DFS(int x, int y) {
-        for (int i = 0; i < 4; i++) {
+    public void DFS(int x, int y, int[][] board) {
+        for (int i = 0; i < 8; i++) {
             int nx = x + dx[i];
             int ny = y + dy[i];
-            if (nx >= 1 && nx >= n && ny >= 1 && ny >= n && board[nx][ny] == 1){
+            if (nx >= 1 && nx <= n && ny >= 1 && ny <= n && board[nx][ny] == 1){
                 board[nx][ny] = 0;
-                DFS(nx, ny);
+                DFS(nx, ny, board);
             }
         }
 
@@ -26,19 +28,23 @@ public class Main {
         Scanner sc = new Scanner(System.in);
 
         n = sc.nextInt();
-        board = new int[n + 1][n + 1];
+        board = new int[n+1][n+1];
         for (int i = 1; i <= n; i++) {
             for (int j = 1; j <= n; j++) {
                 board[i][j] = sc.nextInt();
             }
         }
-
         for (int i = 1; i <= n; i++) {
             for (int j = 1; j <= n; j++) {
-                int tmp = board[i][j];
-                if (tmp == 1) T.DFS(i, j);
+                if (board[i][j] == 1) {
+                    answer++;
+                    board[i][j] = 0;
+                    T.DFS(i, j, board);
+                }
             }
         }
+
+        System.out.println(answer);
 
 
     }
