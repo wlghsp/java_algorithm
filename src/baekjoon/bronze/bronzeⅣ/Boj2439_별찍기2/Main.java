@@ -8,7 +8,11 @@ public class Main {
 
     /*
      java 11 부터는 스트링 반복을 repeat로 할 수 있음
+
+    https://stackoverflow.com/questions/1235179/simple-way-to-repeat-a-string
+    다양한 방법이 있긴 함
      */
+
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int N = Integer.parseInt(br.readLine());
