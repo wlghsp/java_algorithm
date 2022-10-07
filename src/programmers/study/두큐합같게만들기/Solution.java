@@ -1,39 +1,46 @@
 package programmers.study.두큐합같게만들기;
 
-import java.util.Iterator;
+import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.Queue;
 
 public class Solution {
 
     /*
-        각 큐의 원소 합이 같도록 만들려고 함
+        카카오 풀이 참조 탐욕법
+        1. sum1 > sum2 라면, queue1의 원소를 queue2로 넘겨줍니다.
+        2. sum1 < sum2 라면, queue2의 원소를 queue1로 넘겨줍니다.
 
-        1.총 수의 합을 구하고 그 절반을 구해서 그 합이 되도록 만들기
-        2.제일 큰 수가 다른 모든 수의 합보다 클때는 -1을 출력
+
      */
 
     public int solution(int[] queue1, int[] queue2) {
-        int answer = -2;
-
+        long sum1 = Arrays.stream(queue1).sum();
+        long sum2 = Arrays.stream(queue2).sum();
         Queue<Integer> q1 = new LinkedList<>();
         Queue<Integer> q2 = new LinkedList<>();
         for (int i : queue1) q1.add(i);
         for (int i : queue2) q2.add(i);
-        int cnt = 0;
+        int answer = 0;
 
-
-
-        return answer;
-    }
-
-    public int getQSum(Queue<Integer> q) {
-        int sum = 0;
-        while (!q.isEmpty()) {
-            int n = q.remove();
-            sum += n;
+        // 총 4n번 탐색 후에는 이미 탐색했던 구간을 다시 탐색하는 것이므로 -1을 반환
+        for (int i = 0; i < 4 * queue1.length; i++) {
+            if (sum1 > sum2) {
+                sum1 -= q1.peek();
+                sum2 += q1.peek();
+                q2.offer(q1.poll());
+            } else if (sum1 < sum2) {
+                sum1 += q2.peek();
+                sum2 -= q2.peek();
+                q1.offer(q2.poll());
+            } else { // 둘이 같음
+                return answer;
+            }
+            // 한 번의 pop과 한 번의 insert를 합쳐서 작업을 1회 수행
+            answer++;
         }
-        return sum;
+
+        return -1;
     }
 
     public static void main(String[] args) {
