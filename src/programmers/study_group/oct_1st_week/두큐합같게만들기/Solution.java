@@ -1,4 +1,4 @@
-package programmers.study.두큐합같게만들기;
+package programmers.study_group.oct_1st_week.두큐합같게만들기;
 
 import java.util.Arrays;
 import java.util.LinkedList;

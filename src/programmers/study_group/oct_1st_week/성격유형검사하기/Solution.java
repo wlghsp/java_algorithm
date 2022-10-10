@@ -1,4 +1,4 @@
-package programmers.study.성격유형검사하기;
+package programmers.study_group.oct_1st_week.성격유형검사하기;
 
 import java.util.*;
 
