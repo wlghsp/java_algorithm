@@ -3,8 +3,7 @@ package programmers.level0.종이자르기;
 public class Solution {
 
     public int solution(int M, int N) {
-        int answer = 0;
-        return answer;
+        return M * N - 1;
     }
 
     public static void main(String[] args) {
