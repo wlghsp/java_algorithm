@@ -4,6 +4,19 @@ public class Solution {
 
     public String solution(String[] id_pw, String[][] db) {
         String answer = "";
+        boolean noIdMatch = true;
+        for (String[] s : db) {
+            if (id_pw[0].equals(s[0]) && id_pw[1].equals(s[1])) {
+                answer = "login";
+                return answer;
+            }
+            if (id_pw[0].equals(s[0])) {
+                noIdMatch = false;
+            }
+        }
+        if (noIdMatch) answer = "fail";
+        else answer = "wrong pw";
+
         return answer;
     }
 
