@@ -1,4 +1,4 @@
-package programmers.자전거공장;
+package programmers.커뮤러닝7기.first_week.자전거공장;
 
 public class Solution {
     public int solution(int[][] cost, int[][] order) {

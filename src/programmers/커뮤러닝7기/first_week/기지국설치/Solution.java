@@ -1,4 +1,4 @@
-package programmers.기지국설치;
+package programmers.커뮤러닝7기.first_week.기지국설치;
 
 public class Solution {
 
