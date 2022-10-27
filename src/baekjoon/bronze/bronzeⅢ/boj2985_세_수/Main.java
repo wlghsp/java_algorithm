@@ -20,18 +20,18 @@ public class Main {
             System.out.printf("%d+%d=%d\n", a, b, c);
         } else if ((a*b) == c) {
             System.out.printf("%d*%d=%d\n", a, b, c);
-        } else if (a%b == 0 && (a/b) == c) {
-            System.out.printf("%d/%d=%d\n", a, b, c);
         } else if ((a-b) == c){
             System.out.printf("%d-%d=%d\n", a, b, c);
-        } else if (b%c == 0 && a == (b/c)){
-            System.out.printf("%d=%d/%d\n", a, b, c);
+        } else if ((a/b) == c) {
+            System.out.printf("%d/%d=%d\n", a, b, c);
         } else if (a == (b*c)){
             System.out.printf("%d=%d*%d\n", a, b, c);
         } else if (a == (b-c)){
             System.out.printf("%d=%d-%d\n", a, b, c);
         } else if (a == (b+c)){
             System.out.printf("%d=%d+%d\n", a, b, c);
+        } else if (a == (b/c)){
+            System.out.printf("%d=%d/%d\n", a, b, c);
         }
 
     }
