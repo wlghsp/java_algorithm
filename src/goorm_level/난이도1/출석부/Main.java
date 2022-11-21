@@ -1,4 +1,4 @@
-package goorm.출석부;
+package goorm_level.난이도1.출석부;
 
 import java.io.BufferedReader;
 import java.io.IOException;

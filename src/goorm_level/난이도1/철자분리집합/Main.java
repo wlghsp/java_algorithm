@@ -1,4 +1,4 @@
-package goorm.철자분리집합;
+package goorm_level.난이도1.철자분리집합;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
