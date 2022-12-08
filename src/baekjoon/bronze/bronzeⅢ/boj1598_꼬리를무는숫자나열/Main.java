@@ -13,5 +13,4 @@ public class Main {
         int b = Integer.parseInt(st.nextToken()) - 1;
         System.out.println(Math.abs(a / 4 - b / 4) + Math.abs(a % 4 - b % 4));
     }
-
 }
