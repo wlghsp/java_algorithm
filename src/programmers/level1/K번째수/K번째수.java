@@ -1,4 +1,4 @@
-package programmers.level1;
+package programmers.level1.K번째수;
 
 import java.io.IOException;
 import java.util.ArrayList;

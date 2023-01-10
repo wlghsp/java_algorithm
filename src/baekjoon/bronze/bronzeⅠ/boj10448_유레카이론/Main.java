@@ -1,4 +1,4 @@
-package baekjoon.bronze.bronzeⅡ.boj10448_유레카이론;
+package baekjoon.bronze.bronzeⅠ.boj10448_유레카이론;
 
 import java.io.BufferedReader;
 import java.io.IOException;

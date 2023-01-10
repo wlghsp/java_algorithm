@@ -1,4 +1,4 @@
-package programmers.level1;
+package programmers.level1.x간격n개수;
 
 import java.util.Arrays;
 
