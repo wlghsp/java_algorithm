@@ -1,4 +1,4 @@
-package codeup.탐색기반설계;
+package codeup.탐색기반설계.codeup2623_최대공약수;
 
 /*
 두 정수 a, b를 입력받아서, a, b의 최대공약수를 출력하시오.
@@ -23,7 +23,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Codeup2623_최대공약수 {
+public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
