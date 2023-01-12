@@ -20,6 +20,7 @@ public class Main {
         N = Integer.parseInt(st.nextToken());
         M = Integer.parseInt(st.nextToken());
         A = new int[N][M];
+        visited = new boolean[N][M];
         for (int i = 0; i < N; i++) {
             st = new StringTokenizer(br.readLine());
             String line = st.nextToken();
