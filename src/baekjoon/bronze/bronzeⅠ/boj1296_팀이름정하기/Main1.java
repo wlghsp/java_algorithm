@@ -21,8 +21,7 @@ public class Main1 {
         int max = 0;
         for (int i = 0; i < n; i++) {
             arr = new int[4];
-            countAlphas(yondu);
-            countAlphas(teams[i]);
+            countAlphas(yondu.concat(teams[i]));
             int probability = ((arr[0]+arr[1]) * (arr[0] + arr[2]) * (arr[0] + arr[3])
             * (arr[1] + arr[2]) * (arr[1] + arr[3]) * (arr[2] + arr[3])) % 100;
             if (probability > max) {
