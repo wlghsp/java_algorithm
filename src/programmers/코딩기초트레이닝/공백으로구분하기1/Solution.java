@@ -1,4 +1,4 @@
-package programmers.level0.공백으로구분하기1;
+package programmers.코딩기초트레이닝.공백으로구분하기1;
 
 import java.util.Arrays;
 

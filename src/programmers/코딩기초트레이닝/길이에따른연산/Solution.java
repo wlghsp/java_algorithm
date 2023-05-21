@@ -1,4 +1,4 @@
-package programmers.level0.길이에따른연산;
+package programmers.코딩기초트레이닝.길이에따른연산;
 
 import java.util.Arrays;
 

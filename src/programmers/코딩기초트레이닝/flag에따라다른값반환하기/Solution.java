@@ -1,4 +1,4 @@
-package programmers.level0.flag에따라다른값반환하기;
+package programmers.코딩기초트레이닝.flag에따라다른값반환하기;
 
 public class Solution {
 

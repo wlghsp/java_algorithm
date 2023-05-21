@@ -1,4 +1,4 @@
-package programmers.level0.문자열앞의n글자;
+package programmers.코딩기초트레이닝.문자열앞의n글자;
 
 public class Solution {
 
