@@ -2,9 +2,7 @@ package programmers.코딩기초트레이닝.수조작하기1;
 
 public class Solution {
     public int solution(int n, String control) {
-        int answer = 0;
-
-        return answer;
+        return control.chars().reduce(n, (acc, c) -> acc + (c == 'w' ? 1 : c == 's' ? -1 : c == 'd' ? 10 : -10));
     }
 
     public static void main(String[] args) {
