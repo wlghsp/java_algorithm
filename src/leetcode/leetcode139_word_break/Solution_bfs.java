@@ -1,33 +1,35 @@
 package leetcode.leetcode139_word_break;
 
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 
-public class Solution {
+public class Solution_bfs {
     public boolean wordBreak(String s, List<String> wordDict) {
-        String joined = String.join("", wordDict);
-        if (s.equals(joined)) return true;
-        Collections.sort(wordDict);
-
-        for (String w : wordDict) {
-          if (s.contains(w)) {
-              String[] strArr = s.split("\\Q" + w + "\\E");
-              int cnt = 0;
-              for (String e : strArr) {
-                  if (!e.isEmpty() && wordDict.contains(e)) {
-                      cnt++;
-                  }
-              }
-              if (strArr.length == cnt) return true;
-          }
+        Set<String> wordDictSet = new HashSet<>(wordDict);
+        Queue<Integer> queue = new LinkedList<>();
+        int[] visited = new int[s.length()];
+        queue.add(0);
+        while (!queue.isEmpty()) {
+            int start = queue.remove();
+            if (visited[start] == 0) {
+                for (int end = start + 1; end <= s.length(); end++) {
+                    if (wordDictSet.contains(s.substring(start, end))) {
+                        queue.add(end);
+                        if (end == s.length()) {
+                            return true;
+                        }
+                    }
+                }
+            }
+            visited[start]  = 1;
         }
         return false;
     }
 
+
+
     public static void main(String[] args) {
-        Solution s = new Solution();
+        Solution_bfs s = new Solution_bfs();
         System.out.println(s.wordBreak("leetcode", Arrays.asList("leet", "code"))); // true
         System.out.println(s.wordBreak("applepenapple", Arrays.asList("apple", "pen"))); // true
         System.out.println(s.wordBreak("catsandog", Arrays.asList("cats","dog","sand","and","cat"))); // false
