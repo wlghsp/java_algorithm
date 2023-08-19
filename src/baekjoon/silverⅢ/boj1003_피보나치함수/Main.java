@@ -5,36 +5,30 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class Main {
-    static final int MAX_N = 40;
-
-    static Long[] dp;
-
-    static int T;
-
-    static Long fibonacci(int n) {
-        if (dp[n] == null) {
-            dp[n] = fibonacci(n - 1) + fibonacci(n - 2);
-        }
-        return dp[n];
-    }
+    static Integer[][] dp = new Integer[41][2];
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        T = Integer.parseInt(br.readLine());
+        int T = Integer.parseInt(br.readLine());
+        dp[0][0] = 1;
+        dp[0][1] = 0;
+        dp[1][0] = 0;
+        dp[1][1] = 1;
 
-        for (int i = 0; i < T; i++) {
-            int cnt1 = 0, cnt0 = 0;
-            int n = Integer.parseInt(br.readLine());
-            dp = new Long[MAX_N + 1];
-            dp[0] = 0L;
-            dp[1] = 1L;
-            fibonacci(n);
-            for (int j = 0; j < n; j++) {
-                if(dp[j] == 0L) cnt0++;
-                else if (dp[j] == 1L) cnt1++;
-            }
-            System.out.printf("%d %d\n", cnt0, cnt1);
+        StringBuilder sb = new StringBuilder();
+        while (T-- > 0) {
+            int N = Integer.parseInt(br.readLine());
+            fibonacci(N);
+            sb.append(dp[N][0]).append(" ").append(dp[N][1]).append('\n');
         }
+        System.out.println(sb);
+    }
 
+    private static Integer[] fibonacci(int n) {
+        if (dp[n][0] == null || dp[n][1] == null) {
+            dp[n][0] = fibonacci(n - 1)[0] + fibonacci(n - 2)[0];
+            dp[n][1] = fibonacci(n - 1)[1] + fibonacci(n - 2)[1];
+        }
+        return dp[n];
     }
 }
