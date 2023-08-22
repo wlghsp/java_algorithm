@@ -1,6 +1,5 @@
 package programmers.코딩기초트레이닝.코드처리하기;
 
-import org.junit.platform.commons.util.StringUtils;
 
 public class Solution {
 

@@ -1,6 +1,5 @@
 package programmers.level3.네트워크;
 
-import org.junit.jupiter.api.Test;
 
 
 public class 네트워크 {
