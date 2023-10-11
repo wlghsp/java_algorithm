@@ -15,4 +15,12 @@ class SolutionTest {
         assertArrayEquals(new String[]{"#####","# # #", "### #", "# ##", "#####"}, result1);
         assertArrayEquals(new String[]{"######", "### #", "## ##", " #### ", " #####", "### # "}, result2);
     }
+
+
+    @Test
+    void decimalToBinaryTest() {
+        Solution s = new Solution();
+        String result1 = s.decimalToBinary(5, 9);
+        assertEquals("01001", result1);
+    }
 }
