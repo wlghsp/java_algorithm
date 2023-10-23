@@ -1,4 +1,4 @@
-package 스프링과진짜초면5기.javafour.capsulation;
+package 스프링과진짜초면5기.task1.capsulation;
 
 public class SuperClass {
 

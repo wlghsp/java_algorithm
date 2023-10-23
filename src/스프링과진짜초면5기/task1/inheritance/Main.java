@@ -1,4 +1,4 @@
-package 스프링과진짜초면5기.javafour.inheritance;
+package 스프링과진짜초면5기.task1.inheritance;
 
 public class Main {
     public static void main(String[] args) {

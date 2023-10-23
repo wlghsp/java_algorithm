@@ -1,6 +1,6 @@
-package 스프링과진짜초면5기.javafour.capsulation.another;
+package 스프링과진짜초면5기.task1.capsulation.another;
 
-import 스프링과진짜초면5기.javafour.capsulation.SuperClass;
+import 스프링과진짜초면5기.task1.capsulation.SuperClass;
 
 public class Test2 {
 
