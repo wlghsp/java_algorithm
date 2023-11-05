@@ -2,6 +2,10 @@ package leetcode.leetcode121_Best_Time_to_Buy_and_SellStock;
 
 public class Solution {
 
+    /**
+     * Time: O(n)
+     * Space: O(1)
+     */
     public int maxProfit(int[] prices) {
         int answer = 0;
         int min = prices[0];
