@@ -1,9 +1,30 @@
 package leetcode.leetcode167_input_array_is_sorted;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class Solution {
 
-
+    /**
+     * Time: O(N)
+     * Space: O(N)
+     */
     public int[] twoSum(int[] numbers, int target) {
+        Map<Integer, Integer> map = new HashMap<>();
+
+        for (int i = 0; i < numbers.length; i++) {
+            int diff = target - numbers[i];
+            if (map.containsKey(diff)) {
+                return new int[]{map.get(diff), i + 1};
+            }
+            map.put(numbers[i], i + 1);
+        }
+
+        return new int[]{};
+    }
+
+
+    public int[] twoSum1(int[] numbers, int target) {
         int[][] numWithIndex = new int[numbers.length][2];
         for (int i = 0; i < numbers.length; i++) {
             numWithIndex[i][0] = numbers[i];
