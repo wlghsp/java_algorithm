@@ -3,8 +3,8 @@ package leetcode.leetcode392_is_subsequence;
 public class Solution {
 
     public boolean isSubsequence(String s, String t) {
-        if (s.isEmpty() || t.isEmpty()) {
-            return false;
+        if (s.isEmpty()) {
+            return true;
         }
         int l = 0;
         for (int r = 0; r < t.length(); r++) {
