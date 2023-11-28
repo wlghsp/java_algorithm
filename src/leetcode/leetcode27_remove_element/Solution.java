@@ -3,6 +3,19 @@ package leetcode.leetcode27_remove_element;
 public class Solution {
 
     public int removeElement(int[] nums, int val) {
+        int k = 0;
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] != val) {
+                nums[k] = nums[i];
+                k++;
+            }
+        }
+
+        return k; // val과 같지 않은 숫자의 갯수를 반환
+    }
+
+
+    public int removeElement1(int[] nums, int val) {
         int l = 0, r = nums.length - 1;
         while (l <= r) { // 반복은 l과 r이 같아 질 때까지
             if (nums[l] == val) { // val과 같은 수를 발견하면
