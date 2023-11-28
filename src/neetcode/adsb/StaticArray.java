@@ -31,4 +31,21 @@ public class StaticArray {
         // Insert at i
         arr[i] = n;
     }
+
+    // Remove value at index i before shifting elements to the left.
+    // Assuming i is a valid index
+    public void removeMiddle(int[] arr, int i, int length) {
+        // Shift starting from i + 1 to end.
+        for (int index = i + 1; index < length; index++) {
+            arr[index - 1] = arr[index];
+        }
+        // No need to 'remove' arr[i], since we already shifted
+    }
+
+    public void printArr(int[] arr, int length) {
+        for (int i = 0; i < length; i++) {
+            System.out.print(arr[i] + " ");
+        }
+        System.out.println();
+    }
 }
