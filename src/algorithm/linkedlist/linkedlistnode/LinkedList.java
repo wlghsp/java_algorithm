@@ -1,16 +1,22 @@
-package algorithm.linkedlist;
+package algorithm.linkedlist.linkedlistnode;
 
-public class Node {
-    int data;
-    Node next = null;
+public class LinkedList {
+    Node header;
 
-    Node(int d) {
-        this.data = d;
+    static class Node {
+        int data;
+        Node next = null;
+
+    }
+
+    LinkedList() {
+        header = new Node();
     }
 
     void append(int d) {
-        Node end = new Node(d);
-        Node n = this;
+        Node end = new Node();
+        end.data = d;
+        Node n = header;
         while (n.next != null) {
             n = n.next;
         }
@@ -18,7 +24,7 @@ public class Node {
     }
 
     void delete(int d) {
-        Node n = this;
+        Node n = header;
         while (n.next != null) {
             if (n.next.data == d) {
                 n.next = n.next.next;
@@ -29,7 +35,7 @@ public class Node {
     }
 
     void retrieve() {
-        Node n = this;
+        Node n = header.next;
         while (n.next != null) {
             System.out.print(n.data + " -> ");
             n = n.next;
