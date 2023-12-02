@@ -1,4 +1,4 @@
-package neetcode.adsb;
+package neetcode._2_static_arrays;
 
 public class StaticArray {
 
