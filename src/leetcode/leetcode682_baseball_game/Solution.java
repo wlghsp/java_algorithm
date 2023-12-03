@@ -23,7 +23,7 @@ public class Solution {
                 case "C" -> {
                     stk.pop();
                 }
-                case null, default -> stk.push(Integer.parseInt(s));
+                default -> stk.push(Integer.parseInt(s));
             }
         }
 
