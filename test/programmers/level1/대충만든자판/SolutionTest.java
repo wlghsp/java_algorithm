@@ -13,8 +13,8 @@ class SolutionTest {
         int[] result2 = s.solution(new String[]{"AA"}, new String[]{"B"});
         int[] result3 = s.solution(new String[]{"AGZ", "BSSS"}, new String[]{"ASA","BGZ"});
 
-        assertEquals(new int[]{9, 4}, result1);
-        assertEquals(new int[]{-1}, result2);
-        assertEquals(new int[]{4, 6}, result3);
+        assertArrayEquals(new int[]{9, 4}, result1);
+        assertArrayEquals(new int[]{-1}, result2);
+        assertArrayEquals(new int[]{4, 6}, result3);
     }
 }
