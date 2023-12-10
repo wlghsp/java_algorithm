@@ -2,6 +2,12 @@ package programmers.level1._3진법뒤집기;
 
 public class Solution {
 
+    public int solution(int n) {
+        String str = Integer.toString(n, 3);
+        String reversed = new StringBuilder(str).reverse().toString();
+        return Integer.valueOf(reversed, 3);
+    }
+
     public String convertToTrinary1(int n, String result) {
         if (n == 0) {
             return result.isEmpty() ? "0" : result;
@@ -33,7 +39,7 @@ public class Solution {
         return result;
     }
 
-    public int solution(int n) {
+    public int solution1(int n) {
         String str = new StringBuilder(convertToTrinary(n)).reverse().toString();
         return convertToDecimal(str);
     }
