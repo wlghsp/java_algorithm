@@ -1,5 +1,6 @@
 package leetcode.leetcode20_valid_parentheses;
 
+import leetcode.stack.leetcode20_valid_parentheses.Solution;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

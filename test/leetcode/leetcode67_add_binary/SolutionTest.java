@@ -1,5 +1,6 @@
 package leetcode.leetcode67_add_binary;
 
+import leetcode.etc.leetcode67_add_binary.Solution;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

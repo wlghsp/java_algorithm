@@ -1,5 +1,6 @@
 package leetcode.leetcode128_LongestConsecutiveSequence;
 
+import leetcode.arrays_hashing.leetcode128_LongestConsecutiveSequence.Solution;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

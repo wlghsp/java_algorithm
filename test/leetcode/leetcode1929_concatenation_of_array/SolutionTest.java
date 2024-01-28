@@ -1,5 +1,6 @@
 package leetcode.leetcode1929_concatenation_of_array;
 
+import leetcode.etc.leetcode1929_concatenation_of_array.Solution;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

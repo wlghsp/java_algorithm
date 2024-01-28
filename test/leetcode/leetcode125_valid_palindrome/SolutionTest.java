@@ -1,5 +1,6 @@
 package leetcode.leetcode125_valid_palindrome;
 
+import leetcode.twopointers.leetcode125_valid_palindrome.Solution;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

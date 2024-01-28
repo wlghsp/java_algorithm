@@ -1,5 +1,6 @@
 package leetcode.leetcode153_find_minimum_in_rotated_sorted_array;
 
+import leetcode.binarysearch.leetcode153_find_minimum_in_rotated_sorted_array.Solution;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

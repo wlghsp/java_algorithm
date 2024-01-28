@@ -1,5 +1,6 @@
 package leetcode.leetcode392_is_subsequence;
 
+import leetcode.etc.leetcode392_is_subsequence.Solution;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

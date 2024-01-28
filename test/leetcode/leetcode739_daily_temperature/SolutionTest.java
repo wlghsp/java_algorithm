@@ -1,5 +1,6 @@
 package leetcode.leetcode739_daily_temperature;
 
+import leetcode.twopointers.leetcode739_daily_temperature.Solution;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

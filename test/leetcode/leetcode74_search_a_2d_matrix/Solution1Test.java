@@ -1,5 +1,6 @@
 package leetcode.leetcode74_search_a_2d_matrix;
 
+import leetcode.binarysearch.leetcode74_search_a_2d_matrix.Solution1;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

@@ -1,5 +1,6 @@
 package leetcode.leetcode22_generate_parentheses;
 
+import leetcode.stack.leetcode22_generate_parentheses.Solution;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;

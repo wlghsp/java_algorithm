@@ -1,5 +1,6 @@
 package leetcode.leetcode567_permutation_in_string;
 
+import leetcode.slidingwindow.leetcode567_permutation_in_string.Solution;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

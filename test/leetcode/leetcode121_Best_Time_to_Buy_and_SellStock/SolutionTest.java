@@ -1,5 +1,6 @@
 package leetcode.leetcode121_Best_Time_to_Buy_and_SellStock;
 
+import leetcode.slidingwindow.leetcode121_Best_Time_to_Buy_and_SellStock.Solution;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

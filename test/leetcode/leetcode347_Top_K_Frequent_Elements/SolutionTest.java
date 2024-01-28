@@ -1,5 +1,6 @@
 package leetcode.leetcode347_Top_K_Frequent_Elements;
 
+import leetcode.arrays_hashing.leetcode347_Top_K_Frequent_Elements.Solution;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

@@ -1,5 +1,6 @@
 package leetcode.leetcode682_baseball_game;
 
+import leetcode.etc.leetcode682_baseball_game.Solution;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

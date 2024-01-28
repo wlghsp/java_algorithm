@@ -1,5 +1,6 @@
 package leetcode.leetcode39_Combination_Sum;
 
+import leetcode.backtracking.leetcode39_Combination_Sum.Solution;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;

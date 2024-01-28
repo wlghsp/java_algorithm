@@ -1,5 +1,6 @@
 package leetcode.leetcode3_longest_substring_without_repeating_characters;
 
+import leetcode.slidingwindow.leetcode3_longest_substring_without_repeating_characters.Solution;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

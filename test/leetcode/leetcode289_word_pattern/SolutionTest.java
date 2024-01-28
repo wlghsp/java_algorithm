@@ -1,5 +1,6 @@
 package leetcode.leetcode289_word_pattern;
 
+import leetcode.etc.leetcode289_word_pattern.Solution;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

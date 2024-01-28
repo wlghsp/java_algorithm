@@ -1,5 +1,6 @@
 package leetcode.leetcode76_minimum_window_substring;
 
+import leetcode.slidingwindow.leetcode76_minimum_window_substring.Solution;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

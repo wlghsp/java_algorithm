@@ -1,5 +1,6 @@
 package leetcode.leetcode11_container_with_most_water;
 
+import leetcode.twopointers.leetcode11_container_with_most_water.Solution;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

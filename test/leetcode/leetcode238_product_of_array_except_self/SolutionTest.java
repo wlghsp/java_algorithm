@@ -1,5 +1,6 @@
 package leetcode.leetcode238_product_of_array_except_self;
 
+import leetcode.arrays_hashing.leetcode238_product_of_array_except_self.Solution;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

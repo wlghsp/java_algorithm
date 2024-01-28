@@ -1,5 +1,6 @@
 package leetcode.leetcode42_trapping_rain_water;
 
+import leetcode.twopointers.leetcode42_trapping_rain_water.Solution;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

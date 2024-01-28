@@ -1,5 +1,6 @@
 package leetcode.leetcode494_target_sum;
 
+import leetcode._2d_dp.leetcode494_target_sum.Solution;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

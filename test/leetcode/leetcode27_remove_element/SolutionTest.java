@@ -1,5 +1,6 @@
 package leetcode.leetcode27_remove_element;
 
+import leetcode.etc.leetcode27_remove_element.Solution;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

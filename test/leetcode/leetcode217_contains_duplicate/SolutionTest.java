@@ -1,5 +1,6 @@
 package leetcode.leetcode217_contains_duplicate;
 
+import leetcode.arrays_hashing.leetcode217_contains_duplicate.Solution;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

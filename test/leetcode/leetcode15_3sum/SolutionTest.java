@@ -1,5 +1,6 @@
 package leetcode.leetcode15_3sum;
 
+import leetcode.twopointers.leetcode15_3sum.Solution;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;

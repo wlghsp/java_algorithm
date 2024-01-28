@@ -1,5 +1,6 @@
 package leetcode.leetcode33_search_in_rotated_sorted_array;
 
+import leetcode.binarysearch.leetcode33_search_in_rotated_sorted_array.Solution;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

@@ -1,5 +1,6 @@
 package leetcode.leetcode784_letter_case_permutation;
 
+import leetcode.etc.leetcode784_letter_case_permutation.Solution;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;

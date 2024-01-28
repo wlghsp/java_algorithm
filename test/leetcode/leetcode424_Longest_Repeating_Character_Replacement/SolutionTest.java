@@ -1,5 +1,6 @@
 package leetcode.leetcode424_Longest_Repeating_Character_Replacement;
 
+import leetcode.slidingwindow.leetcode424_Longest_Repeating_Character_Replacement.Solution;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

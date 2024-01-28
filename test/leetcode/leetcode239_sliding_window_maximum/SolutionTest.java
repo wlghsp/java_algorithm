@@ -1,5 +1,6 @@
 package leetcode.leetcode239_sliding_window_maximum;
 
+import leetcode.slidingwindow.leetcode239_sliding_window_maximum.Solution;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

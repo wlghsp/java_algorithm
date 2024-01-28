@@ -1,5 +1,6 @@
 package leetcode.leetcode875_koko_eating_bananas;
 
+import leetcode.binarysearch.leetcode875_koko_eating_bananas.Solution;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

@@ -1,5 +1,6 @@
 package leetcode.leetcode150_evaluate_reverse_polish_notation;
 
+import leetcode.stack.leetcode150_evaluate_reverse_polish_notation.Solution;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
