@@ -15,7 +15,7 @@ public class Solution {
 
             if (total < 0) {
                 total = 0;
-                answer++;
+                answer = i + 1;
             }
         }
 
