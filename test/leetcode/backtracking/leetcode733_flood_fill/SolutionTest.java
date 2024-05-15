@@ -1,4 +1,4 @@
-package leetcode.etc.leetcode733_floo_fill;
+package leetcode.backtracking.leetcode733_flood_fill;
 
 import org.junit.jupiter.api.Test;
 
