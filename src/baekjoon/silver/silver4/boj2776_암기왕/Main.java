@@ -1,5 +1,11 @@
 package baekjoon.silver.silver4.boj2776_암기왕;
-
+/**
+ * Author    : Choi Jiho
+ * Date      : 2024.05.16(Thu)
+ * Runtime   : 2088 ms
+ * Memory    : 364692 KB
+ * Algorithm : HashMap
+ */
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;

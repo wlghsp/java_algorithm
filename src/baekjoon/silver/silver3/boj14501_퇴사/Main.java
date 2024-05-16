@@ -1,5 +1,13 @@
 package baekjoon.silver.silver3.boj14501_퇴사;
 
+/**
+ * Author    : Choi Jiho
+ * Date      : 2024.05.16(Thu)
+ * Runtime   : 128 ms
+ * Memory    : 14216 KB
+ * Algorithm : Backtracking, DFS
+ */
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;

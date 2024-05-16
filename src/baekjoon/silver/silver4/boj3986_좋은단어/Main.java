@@ -1,5 +1,12 @@
 package baekjoon.silver.silver4.boj3986_좋은단어;
 
+/**
+ * Author    : Choi Jiho
+ * Date      : 2024.05.16(Thu)
+ * Runtime   : 308 ms
+ * Memory    : 23056 KB
+ * Algorithm : Stack
+ */
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;

@@ -1,5 +1,11 @@
 package baekjoon.silver.silver4.boj1158_요세푸스문제;
-
+/**
+ * Author    : Choi Jiho
+ * Date      : 2024.05.16(Thu)
+ * Runtime   : 524 ms
+ * Memory    : 294388 KB
+ * Algorithm : Queue
+ */
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
