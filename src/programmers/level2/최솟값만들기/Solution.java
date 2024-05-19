@@ -12,7 +12,7 @@ public class Solution {
         return answer;
     }
 
-    public static void quickSort(int[] arr, int start, int end) {
+    private static void quickSort(int[] arr, int start, int end) {
         if (start >= end) return; // 원소가 1개인 경우 종료
         int pivot = start; // 피벗은 첫 번째 원소
         int left = start + 1;
@@ -39,7 +39,7 @@ public class Solution {
 
     }
 
-    public static void swap(int[] a, int i, int j) {
+    private static void swap(int[] a, int i, int j) {
         int temp = a[i];
         a[i] = a[j];
         a[j] = temp;
