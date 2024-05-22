@@ -15,9 +15,9 @@ class SolutionTest {
         String result3 = s.solution(3);
         String result4 = s.solution(4);
 
-        assertThat(result1).isEqualTo(1);
-        assertThat(result2).isEqualTo(2);
-        assertThat(result3).isEqualTo(4);
-        assertThat(result4).isEqualTo(11);
+        assertThat(result1).isEqualTo("1");
+        assertThat(result2).isEqualTo("2");
+        assertThat(result3).isEqualTo("4");
+        assertThat(result4).isEqualTo("11");
     }
 }
