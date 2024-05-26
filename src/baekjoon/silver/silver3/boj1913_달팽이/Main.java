@@ -1,6 +1,7 @@
 package baekjoon.silver.silver3.boj1913_달팽이;
 
 import java.io.BufferedReader;
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
@@ -18,6 +19,7 @@ public class Main {
     static int[] dy = {0, 1, 0, -1};
 
     public static void main(String[] args) throws IOException {
+        System.setIn(new FileInputStream("src/baekjoon/silver/silver3/boj1913_달팽이/input.txt"));
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         N = Integer.parseInt(br.readLine());
         findNum = Integer.parseInt(br.readLine());
