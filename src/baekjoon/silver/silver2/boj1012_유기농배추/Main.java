@@ -38,7 +38,7 @@ public class Main {
                 for (int j = 0; j < N; j++) {
                     if (!visited[i][j] && ground[i][j] == 1) {
                         cnt++;
-                        BFS(i, j);
+                        DFS(i, j);
                     }
                 }
             }
@@ -63,6 +63,18 @@ public class Main {
                 visited[nx][ny] = true;
                 queue.add(new int[]{nx, ny});
             }
+        }
+    }
+
+    private static void DFS(int x, int y) {
+        visited[x][y] = true;
+        for (int i = 0; i < 4; i++) {
+            int nx = x + dx[i];
+            int ny = y + dy[i];
+            if (nx < 0 || ny < 0 || nx >= M || ny >= N) continue;
+            if (visited[nx][ny]) continue;
+            if (ground[nx][ny] == 0) continue;
+            DFS(nx, ny);
         }
     }
 
