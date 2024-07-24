@@ -3,7 +3,14 @@ package programmers.level2.n2배열자르기;
 public class Solution {
 
     public int[] solution(int n, long left, long right) {
-        int[] answer = {};
+        int[] answer = new int[(int) (right - left + 1)];
+
+        for (long i = left; i <= right; i++) {
+            int row = (int) (i / n);
+            int col = (int) (i % n);
+            answer[(int) (i - left)] = Math.max(row, col) + 1;
+        }
+
         return answer;
     }
 }
