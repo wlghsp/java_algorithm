@@ -16,29 +16,24 @@ public class Main {
         StringTokenizer st = new StringTokenizer(br.readLine());
         N = Integer.parseInt(st.nextToken());
         M = Integer.parseInt(st.nextToken());
-        int[] arr = new int[N + 1];
-        boolean[] visited = new boolean[N + 1];
 
-        for (int i = 1; i <= N; i++) {
-            arr[i] = i;
-        }
-        
-        backtrack(arr, visited, "", 0);
+        backtrack(new boolean[N + 1], new int[M], 0);
 
         System.out.println(sb);    
     }
 
-    private static void backtrack(int[] arr, boolean[] visited, String sequence, int length) {
-        if (length == M) {
-            for (char c : sequence.toCharArray()) {
-                sb.append(c).append(' ');
+    private static void backtrack(boolean[] visited, int[] sequence, int depth) {
+        if (depth == M) {
+            for (int i = 0; i < M; i++) {
+                sb.append(sequence[i]).append(' ');
             }
             sb.append('\n');
         } else {
             for (int i = 1; i <= N; i++) {
                 if (!visited[i]) {
                     visited[i] = true;
-                    backtrack(arr, visited, sequence + arr[i], length + 1);
+                    sequence[depth] = i;
+                    backtrack(visited, sequence, depth + 1);
                     visited[i] = false;
                 }
             }
