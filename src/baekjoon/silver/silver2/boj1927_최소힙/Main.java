@@ -7,28 +7,26 @@ import java.io.InputStreamReader;
 import java.util.PriorityQueue;
 
 public class Main {
-    static int N;
-
 
     public static void main(String[] args) throws IOException {
         System.setIn(new FileInputStream("src/baekjoon/silver/silver2/boj1927_최소힙/input.txt"));
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        N = Integer.parseInt(br.readLine());
+        int N = Integer.parseInt(br.readLine());
 
         PriorityQueue<Integer> pq = new PriorityQueue<>();
+        StringBuilder sb = new StringBuilder();
 
-        for (int i = 0; i < N; i++) {
+        while (N-- > 0) {
             int num = Integer.parseInt(br.readLine());
-
-            if (num == 0) {
-                if (pq.isEmpty()) {
-                    System.out.println(0);
-                } else {
-                    System.out.println(pq.poll());
-                }
+            if (pq.isEmpty() && num == 0) {
+                sb.append('0').append(System.lineSeparator());
+            } else if (num == 0) {
+                sb.append(pq.poll()).append(System.lineSeparator());
             } else {
                 pq.add(num);
             }
         }
+
+        System.out.println(sb);
     }
 }
