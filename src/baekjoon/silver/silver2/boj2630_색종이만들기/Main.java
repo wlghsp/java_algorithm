@@ -7,21 +7,20 @@ import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
 public class Main {
-    static int N;
-    static int white, blue;
-    static int[][] board;
+
+    static int N, white, blue;
+    static int[][] paper;
 
     public static void main(String[] args) throws IOException {
         System.setIn(new FileInputStream("src/baekjoon/silver/silver2/boj2630_색종이만들기/input.txt"));
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         N = Integer.parseInt(br.readLine());
-        board = new int[N][N];
+        paper = new int[N][N];
         StringTokenizer st;
-
         for (int i = 0; i < N; i++) {
             st = new StringTokenizer(br.readLine());
             for (int j = 0; j < N; j++) {
-                board[i][j] = Integer.parseInt(st.nextToken());
+                paper[i][j] = Integer.parseInt(st.nextToken());
             }
         }
 
@@ -29,12 +28,11 @@ public class Main {
 
         System.out.println(white);
         System.out.println(blue);
-
     }
 
-    private static void partition(int row, int col, int size) {
-        if (colorCheck(row, col, size)) {
-            if (board[row][col] == 0) {
+    private static void partition(int x, int y, int size) {
+        if (checkIfAllSame(x, y, size)) {
+            if (paper[x][y] == 0) {
                 white++;
             } else {
                 blue++;
@@ -43,21 +41,21 @@ public class Main {
         }
 
         int newSize = size / 2;
-
-        partition(row, col, newSize); // 2 사분면
-        partition(row, col + newSize, newSize); // 1사분면
-        partition(row + newSize, col, newSize); // 3사분면
-        partition(row + newSize, col + newSize, newSize); // 4사분면
+        partition(x, y, newSize);
+        partition(x + newSize, y, newSize);
+        partition(x, y + newSize, newSize);
+        partition(x + newSize, y + newSize, newSize);
     }
 
-    // 현재 파티션의 컬러가 같은지 체크한다.
-    private static boolean colorCheck(int row, int col, int size) {
-        int color = board[row][col]; // 첫 번째 원소를 기준으로 검사
-        for (int i = row; i < row + size; i++) {
-            for (int j = col; j < col + size; j++) {
-                if (board[i][j] != color) return false;
+    private static boolean checkIfAllSame(int x, int y, int size) {
+        int color = paper[x][y];
+
+        for (int i = x; i < x + size; i++) {
+            for (int j = y; j < y + size; j++) {
+                if (paper[i][j] != color) return false;
             }
         }
+
         return true;
     }
 }
