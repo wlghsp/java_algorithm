@@ -7,7 +7,7 @@ import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
 public class Main {
-    static int S, C, max;
+    static int S, C, sum;
     static int[] lengths;
 
     public static void main(String[] args) throws IOException {
@@ -19,6 +19,7 @@ public class Main {
         lengths = new int[S];
         for (int i = 0; i < S; i++) {
             lengths[i] = Integer.parseInt(br.readLine());
+            sum += lengths[i];
         }
 
         process();
@@ -30,21 +31,24 @@ public class Main {
         while (L <= R) {
             long mid = L + (R - L) / 2;
             if (determine(mid)) {
-                answer = getLeftoverLength(mid);
                 L = mid + 1;
             } else {
                 R = mid - 1;
             }
         }
-        System.out.println(answer);
-    }
 
-    private static long getLeftoverLength(long mid) {
-        long sum = 0;
-        // todo 풀이 진행
-        return sum;
-    }
+        long leftover = 0;
+        int piecesCut = 0;
 
+        for (int length : lengths) {
+            piecesCut += (int) (length / R);
+            leftover += (length % R);
+        }
+
+        leftover += (piecesCut - C) * R;
+
+        System.out.println(leftover);
+    }
 
     private static boolean determine(long length) {
         int count = 0;
