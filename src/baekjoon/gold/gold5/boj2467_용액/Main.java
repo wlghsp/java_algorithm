@@ -3,7 +3,6 @@ package baekjoon.gold.gold5.boj2467_용액;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Arrays;
 import java.util.StringTokenizer;
 
 public class Main {
@@ -16,7 +15,7 @@ public class Main {
         for (int i = 0; i < N; i++) {
             arr[i] = Integer.parseInt(st.nextToken());
         }
-        Arrays.sort(arr);
+
         int left = 0, right = arr.length - 1;
         int minAbsSum = Integer.MAX_VALUE;
 
@@ -37,8 +36,6 @@ public class Main {
                 break;
             }
         }
-
-        Arrays.sort(result);
 
         System.out.println(result[0] + " " + result[1]);
     }
