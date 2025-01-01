@@ -18,22 +18,16 @@ public class Main {
         for (int i = 0; i < N; i++) {
             arr[i] = Integer.parseInt(st.nextToken());
         }
-//        int[] distinctArr = Arrays.stream(arr).distinct().sorted().toArray();
-//        Map<Integer, Integer> map = new HashMap<>();
-//        for (int i = 0; i < distinctArr.length; i++) {
-//            map.put(distinctArr[i], i);
-//        }
-        Set<Integer> set = new TreeSet<>();
-        for (int i : arr) {
-            set.add(i);
-        }
+        // 중복 제거 및 정렬
+        int[] distinctArr = Arrays.stream(arr).distinct().sorted().toArray();
 
+        // 좌표를 키로 넣고 인덱스가 Xi > Xj를 만족하는 서로 다른 좌표의 갯수
         Map<Integer, Integer> map = new HashMap<>();
-        int index = 0;
-        for (int num : set) {
-            map.put(num, index++);
+        for (int i = 0; i < distinctArr.length; i++) {
+            map.put(distinctArr[i], i);
         }
 
+        // 출력
         StringBuilder sb = new StringBuilder();
         for (int i : arr) {
             sb.append(map.get(i)).append(" ");
