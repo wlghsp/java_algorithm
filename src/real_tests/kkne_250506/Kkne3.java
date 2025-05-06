@@ -4,17 +4,17 @@ import java.util.*;
 
 public class Kkne3 {
 
-    static List<Integer>[] adj;
+    static List<List<Integer>> adj;
 
     public int[] solution(int N, int[][] relation){
-        adj = new ArrayList[N + 1];
+        adj = new ArrayList<>();
 
-        for (int i = 1; i < N + 1; i++) {
-            adj[i] = new ArrayList<>();
+        for (int i = 0; i < N + 1; i++) {
+            adj.add(new ArrayList<>());
         }
         for (int[] re : relation) {
-            adj[re[0]].add(re[1]);
-            adj[re[1]].add(re[0]);
+            adj.get(re[0]).add(re[1]);
+            adj.get(re[1]).add(re[0]);
         }
 
         int[] answer = new int[N];
@@ -32,7 +32,7 @@ public class Kkne3 {
                 int node = cur[0], depth = cur[1];
                 if (depth == 2) continue;
 
-                for (Integer friend : adj[node]) {
+                for (Integer friend : adj.get(node)) {
                     if (visited[friend]) continue;
 
                     friendsSet.add(friend);
