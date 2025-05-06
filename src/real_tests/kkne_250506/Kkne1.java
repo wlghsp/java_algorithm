@@ -13,7 +13,6 @@ public class Kkne1 {
             for (int j = 0; j < board[0].length; j++) {
                 if (canConnect(i, j, board)) {
                     dfs(i, j, board, board[i][j], 1);
-                    visited[i][j] = false;
                 }
             }
         }
@@ -32,8 +31,9 @@ public class Kkne1 {
             if (board[x][y] != num) continue;
 
             dfs(x, y, board, num, length + 1);
-            visited[x][y] = false;
         }
+
+        visited[i][j] = false;
     }
 
     private boolean canConnect(int i, int j, int[][] board) {
